@@ -392,6 +392,12 @@ html, body {
       /* position: absolute; */
       margin: 30px;
     }
+
+    .detailcontainer{
+      display:block;
+      position: absolute;
+      margin: 30px;
+    }
     @media screen and (max-width: 635px) {
       ul.topnav li.right, 
       ul.topnav li {float: none;padding-top:1%}
@@ -822,3 +828,4 @@ html, body {
         margin:0rem 0rem 1.5rem;
         /* padding: 0.5rem; */
       }
+

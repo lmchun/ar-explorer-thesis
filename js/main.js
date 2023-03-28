@@ -35,11 +35,11 @@ aNav.href="index.html";
 
 aNav5.innerText = "AR Finder"
 aNav5.href="database.html"
-aNav4.innerText = "AR Link Generator"
-aNav4.href="qr.html"
+aNav3.innerText = "AR Link Generator"
+aNav3.href="qr.html"
 
-aNav3.innerText = "QR Scanner"
-aNav3.href="scanner.html"
+aNav4.innerText = "QR Scanner"
+aNav4.href="scanner.html"
 
 /////////////////////////////////////
 function readMore() {
