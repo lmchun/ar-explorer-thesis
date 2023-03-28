@@ -1,0 +1,99 @@
+<html lang="en">
+    <head>
+        <title>QR Code Creator</title>
+        <link rel="icon" type="image/x-icon" href="assets/qr-icon.png">
+        <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
+         <script type="text/javascript" src="js/main.js" defer></script>
+         <script type="text/javascript" src="js/qr.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="QR Creation Tool of AR discovery hub.">   
+    </head>
+    <body>
+        <nav id="navLink">
+          </nav>
+                <hr>
+        <div class="contentpage">
+        <h1>QR Code Creator </h1>
+
+        <!-- <p>Here you can create QR codes for your experiences and link it to a preview page to tell your user about what they might need to know ahead of experiencing your work.</p> -->
+        <!-- <p>If your project has not been submitted to the database already you can still generate a QR code for your project here.</p> -->
+        <div class="qrcontainer">
+        <p>
+            Type in your link or text you want to turn into a QR code.
+        </p>
+        <div class="form">
+           <input type="text" placeholder="https://www.example.com" name="urlinput" id="urlinput" class="textbox">
+           <button class="button" id="QRtextbox" value="Create QR" onclick="replaceurl();"> Create QR</button>
+        <!-- <input type="button" value="Create QR" onclick="replaceurl();"> -->
+        </div>
+        <div class="container">
+            <div class="resultUrl" ></div>
+            <h3 id="newUrl" class="resultHeader">Project Output:</h3>
+            <hr class="hrSpace">
+            <div class="box">
+    
+                <div id="content" class="contentQr">
+                <!-- this is where the qr code will spit out -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <!--<div class="customizationbar">
+            <h3>Customize your QR Code</h3>
+
+            <button type="button" class="collapsible">Color</button>
+            <div class="customcontent">
+             <!-- color container -->
+             <!--<div class="colorbox">
+                <!-- <div class="output" id="output"></div> -->
+               <!--     <div class="result-wrp">
+                     <label>Color</label>
+                     <input type="color" id="colorWell" value="#95C066;"/>
+                     <span class="result" id="result"></span>
+                </div>
+            </div>    
+            </div>
+            <button type="button" class="collapsible">Border</button>
+            <div class="customcontent">
+
+              <!-- radius container -->
+             <!-- <div class="colorbox">
+                <label> Radius</label>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  </div>
+                <!-- <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+                </label> -->
+
+             <!--   <div class="result-wrp">
+                    <label>Color</label>
+                    <input type="color" id="colorWell" value="#95C066;"/>
+                    <span class="result" id="result"></span>
+               </div>
+              
+                     <!-- <button class="button" value="Radius" onclick="updateRadius();">Radius</button> -->
+
+               <!--       </div> 
+            <!--</div>
+            <button type="button" class="collapsible">Icon</button>
+            <div class="customcontent">
+                <div class="colorbox">
+                    <div id="overlay">
+                        <label for="file" class="custom-upload">Select Image</label>
+                        <input id="file" type="file" name="filename" accept="image/*">
+                      </div>
+                    <!-- <button class="button" value="Icon" onclick="updateIcon();">Add Icon</button>
+                    <input type="file" accept="image/jpeg, image/png, image/jpg">
+                    <output></output> -->
+                <!--</div>
+            </div>
+            </div>-->
+        </div>
+    </body>
+</html>

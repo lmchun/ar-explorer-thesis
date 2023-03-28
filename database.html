@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <title>AR Experience Database</title>
+    <link rel="icon" type="image/x-icon" href="assets/qr-icon.png">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Search page of AR discovery hub.">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <script type="text/javascript" src="js/jsonselector.js" defer></script>
+</head>
+<body>
+    <nav id ="navLink">
+      </nav>
+        <hr>
+
+        <div class="contentpage">
+    <h1>AR Finder </h1>
+
+    <!-- <div class="filters">
+        <label for="myCheck">New York</label> 
+        <input type="checkbox"id="localSearch" onclick="">
+      <button id="genreSearch" onclick="" >New York</button>
+    </div> -->
+
+    <div class="searchbar" id="searchbar">
+        <!-- Type in a title or author to search for an experience. -->
+            <!-- <p>Search for an AR experience.</p> -->
+        <div class="search-wrapper">
+            <label><h3>Search AR Experience</h3></label>
+            <input type="search" id="search" class="searchfield" data-search>
+        </div>
+        <!-- <div class="container-btn">
+            <div class="filterbuttons">
+                <button onclick="" class="buttonfilter">Site Specific</button>
+                <button onclick="" class="buttonfilter">Filter 2</button>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="xr-cards" data-xrs-container>
+        </div>
+
+    <div class="xr-details" data-xrs-page-container>
+        </div>
+    <hr id="space">
+
+</div> 
+    <div class="jumpup" id="jumptop">
+        <a href="#top" class="topup">To the Top</a>
+    </div>
+    <footer>
+
+    </footer>
+    <!--                                   -->
+<template data-xrs-cards>
+    <div class="card">
+        <div data-idCard>
+        <div class="grid-card-container">
+            <div class="grid-item">
+                <!-- <img class="urltn"data-urltn> -->
+                <!-- <a href=""data-linkid> <img class="urltn"data-urltn></a> -->
+                <!-- <button class="urltn"data-urltn></button> -->
+                                <div class="urltn"data-urltn></div>
+
+            </div>
+            <div class="grid-item">
+                 <div class="header" data-header></div>
+                 <div class="body" data-body></div>
+             </div>
+        </div>
+    </div>
+</div>
+</template>
+<template data-xrs-page>
+    <div class="xr-detail-page">
+        <div class="grid-page-container">
+            <div class="grid-item">
+                <h1 class="title" data-title></h1>
+                <p class="descr"data-desc></p>
+                <div class="container-btn">
+                    <div class="detailpage"">
+                        <div class="genre" data-genre></div>
+                        <div class="platform" data-platform></div>
+                        <div class=""data-authors></div>
+                        <div class="year" data-year></div>
+                    </div>
+                </div>
+                <div class="container-btn">
+                    <div class="subheader"> How to view:</div>
+                    
+                    <div data-loc></div>
+                    <div data-address></div>
+                </div>
+                <div class="container-btn">
+                <div class="filterbuttons"><span data-try></span>
+                <span data-doc></span></div></div>
+                <div class="requirementcontainer">
+                    <div data-requirements>Requirements:</div>
+                    <!-- <div data-location>Requirements: Image Poster</div> -->
+                    <div data-requirements>something ipsum</div>
+                    
+                </div>
+            </div>
+            <div class="grid-item">
+                <!-- <div class="container" data-urltn> -->
+                <div class="container">
+                    <div class="glide">
+                    <!-- <div class="glide" data-urltn> -->
+                        <div class="glide__track" data-glide-el="track" data-detailImg>
+                        </div>
+                        <div class="glide__bullets" data-glide-el="controls[nav]"data-detailImgBullets>
+                        </div>  
+                    </div>
+                </div>
+                <p class="caption" data-caption></p>
+            </div>
+        </div>
+        <div class="grid-page-container-text"data-page-body>
+            <div class="grid-item">
+                <h3>Intro
+                </h3>
+                <p class="content"data-intro>
+                </p>
+            </div>
+            <div class="grid-item" >
+                <h3 id="details" >Details</h3>
+                <p>
+                    <span class="content" id="previewText" data-detail></span><span id="dots">...</span><span id="fullText"class="content" data-detailfull></span>                    
+                    <span onclick="readMore()" id="more">More</span>
+                </p>
+            </div>
+        </div>
+      
+
+    </div>
+</template>
+
+</body>
+</html>
