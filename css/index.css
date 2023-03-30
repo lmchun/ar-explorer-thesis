@@ -307,8 +307,8 @@ html, body {
       
     /* } */
     .icon{
-      width:50px;
-      height:50px;
+      width:100px;
+      height:100px;
     }
     /* .iconVert{
       padding:0%;
@@ -441,8 +441,15 @@ html, body {
                 flex-wrap: wrap;
                 /* column-gap: 0px; */
       }
- 
+      .icon{
+        /* vertical-align: middle; */
+        width: 60px;
+        height: 60px;
+      }
     }
+    
+    
+
 
     @media screen and (max-width:700px){
       .heroscreenshot{
@@ -455,6 +462,21 @@ html, body {
       .gridScanner{
       gap:1rem;
       /* margin: 100px; */
+      }
+
+      .herotitle{
+        font-size:50px !important;
+        padding-bottom:10% !important;
+
+      }
+      .herosub{
+        font-size: 20px !important;
+        margin-bottom: 2rem !important;
+        padding-top: 0% !important;
+
+      }
+      .herocalltoaction{
+        padding-top: 10% !important;
       }
     }
    
@@ -519,11 +541,17 @@ html, body {
     }
 
     .herotitle{
-      font-size: 100;
+      font-size:100px;
+      padding-bottom:15%;
     }
-    .herotext{
+    .herosub{
       font-size: 30px;
       margin-bottom: 1rem;
+    }
+
+
+    .herocalltoaction{
+      padding-top: 0%;
     }
     .herobtndes{
       font-size:20px;
