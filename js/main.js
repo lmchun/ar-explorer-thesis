@@ -4,7 +4,6 @@ navLink.appendChild(ulNav);
 ulNav.classList.add("topnav");
 ulNav.id = "top";
 const liNav = document.createElement("li");
-const liNav2 = document.createElement("li");
 const liNav3 = document.createElement("li");
 const liNav4 = document.createElement("li");
 const liNav5 = document.createElement("li");
@@ -14,12 +13,10 @@ const aNav3 = document.createElement("a");
 const aNav4 = document.createElement("a");
 const aNav5 = document.createElement("a");
 ulNav.appendChild(liNav);
-ulNav.appendChild(liNav2);
 ulNav.appendChild(liNav3);
 ulNav.appendChild(liNav4);
 ulNav.appendChild(liNav5);
 liNav.appendChild(aNav);
-liNav2.appendChild(aNav2);
 liNav3.appendChild(aNav3);
 liNav4.appendChild(aNav4);
 liNav5.appendChild(aNav5);
@@ -33,8 +30,7 @@ liNav5.classList.add("headertext");
 aNav.innerHTML = `<img src="assets/ardiscoveryicon.png" class="icon" alt="a pin on a map in AR on a phone."> <span class="icontext">AR Discovery Hub</span>`
 aNav.classList.add("iconVert");
 aNav.href="index.html";
-//aNav2.innerHTML = `<p class="titlenav">AR Discovery Hub</p>`
-//aNav2.href="index.html"
+
 
 aNav5.innerText = "Search at Home"
 aNav5.href="database.html"
@@ -44,6 +40,57 @@ aNav3.href="qr.html"
 aNav4.innerText = "Discover Near You"
 aNav4.href="scanner.html"
 
+//////////
+const screen = {
+    small: 0,
+    medium: 400,
+    large: 800
+  };
+// observe window resize
+window.addEventListener('resize', resizeHandler);
+// initial call
+resizeHandler();
+// calculate size
+function resizeHandler() {
+  // get window width
+  const iw = window.innerWidth;
+  // determine named size
+  let size = null;
+  for (let s in screen) {
+    if (iw >= screen[s]) size = s;
+
+    // if(size == "small"){
+      // const liNav2 = document.createElement("li");
+      // ulNav.appendChild(liNav2);
+      // liNav2.appendChild(aNav2);
+      // aNav2.innerHTML = `<button id="menuBtn" onclick=""><img id="menuIcon" src="assets/menu.png"></button>`
+
+    //   aNav5.style.visibility = "hidden";
+    //   aNav4.style.visibility = "hidden";
+    //   aNav3.style.visibility = "hidden";
+    //   aNav2.style.visibility = "show";
+    //   menuBtn.style.backgroundColor = "white";
+    //   menuBtn.style.border = "white";
+    //   menuIcon.style.width = "50px";
+    // }else{
+    //   aNav5.style.visibility = "show";
+    //   aNav4.style.visibility = "show";
+    //   aNav3.style.visibility = "show";
+    //   aNav2.style.visibility = "hidden";
+    // }
+  }
+  console.log(size);
+
+ 
+}
+
+
+// menuBtn = document.createElement("input");
+// menuBtn.setAttribute("class","side-menu")
+// menuBtn.setAttribute("type",checkbox)
+// menuBtn.id = "side-menu";
+// navLink.appendChild(menuBtn);
+// innerHTML = `<label class="hamb" for="side-menu"><span class="hamb-line"></span></label>`
 /////////////////////////////////////
 function readMore() {
   var dots = document.getElementById("dots");

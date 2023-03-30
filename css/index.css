@@ -294,7 +294,11 @@ html, body {
       padding: 10px;
       color:black;
     }
+    .headerPage{
+      margin-bottom: 0px;
+      margin-top: 0px;
 
+    }
     /* nav{ */
       
       /* margin-top: 2em; */
@@ -466,7 +470,7 @@ html, body {
 
       .herotitle{
         font-size:50px !important;
-        padding-bottom:10% !important;
+        padding-bottom:5% !important;
 
       }
       .herosub{
@@ -476,7 +480,7 @@ html, body {
 
       }
       .herocalltoaction{
-        padding-top: 10% !important;
+        padding-top: 5% !important;
       }
     }
    
@@ -551,7 +555,7 @@ html, body {
 
 
     .herocalltoaction{
-      padding-top: 0%;
+      padding-top:10%;
     }
     .herobtndes{
       font-size:20px;
@@ -889,3 +893,41 @@ html, body {
         text-align: left;
         padding-left: 3rem;
       }
+
+
+      /* Menu Icon */
+.hamb{
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+  background: var(--white);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.hamb-line::before{
+  top: 5px;
+}
+.hamb-line::after{
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
