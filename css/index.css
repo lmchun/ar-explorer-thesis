@@ -555,7 +555,7 @@ html, body {
 
     .herotitle{
       font-size:100px;
-      padding-bottom:15%;
+      /* padding-bottom:5%; */
     }
     .herosub{
       font-size: 30px;
@@ -564,7 +564,7 @@ html, body {
 
 
     .herocalltoaction{
-      padding-top:10%;
+      padding-top:0%;
     }
     .herobtndes{
       font-size:20px;
