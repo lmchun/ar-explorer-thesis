@@ -159,7 +159,7 @@ if(searchParams.has('id') == true){
                 
                 beboCarousel.classList.add("glide__slide");
                 beboCarousel.appendChild(imgDetail);
-                beboCarousel.classList.add("detailimg");
+                // beboCarousel.classList.add("detailimg");
                 imgDetail.src = imglink[i];
                 glideul.appendChild(beboCarousel)
 

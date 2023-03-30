@@ -26,8 +26,11 @@ liNav5.appendChild(aNav5);
 liNav3.classList.add("right");
 liNav4.classList.add("right");
 liNav5.classList.add("right");
+liNav3.classList.add("headertext");
+liNav4.classList.add("headertext");
+liNav5.classList.add("headertext");
 // const navhrefs = ['index.html','scanner.html','database.html','qr.html']
-aNav.innerHTML = `<img src="assets/qr-icon.png" class="icon" alt="QR code icon"> AR Discovery Hub`
+aNav.innerHTML = `<img src="assets/ardiscoveryicon.png" class="icon" alt="a pin on a map in AR on a phone."> <span class="icontext">AR Discovery Hub</span>`
 aNav.classList.add("iconVert");
 aNav.href="index.html";
 //aNav2.innerHTML = `<p class="titlenav">AR Discovery Hub</p>`
