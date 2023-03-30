@@ -36,12 +36,12 @@ aNav.href="index.html";
 //aNav2.innerHTML = `<p class="titlenav">AR Discovery Hub</p>`
 //aNav2.href="index.html"
 
-aNav5.innerText = "AR Finder"
+aNav5.innerText = "Search at Home"
 aNav5.href="database.html"
-aNav3.innerText = "AR Link Generator"
+aNav3.innerText = "Add your Experience"
 aNav3.href="qr.html"
 
-aNav4.innerText = "QR Scanner"
+aNav4.innerText = "Discover Near You"
 aNav4.href="scanner.html"
 
 /////////////////////////////////////

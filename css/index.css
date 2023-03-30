@@ -360,7 +360,8 @@ html, body {
       background-color: #2D2E43;
       border-radius: .5em;
       align-items: center;
-      margin:5% 10%;
+      padding-bottom: 4rem;
+      margin:3% 20%;
       /* height: 90%; */
     }
     .scannercontainer > a{
@@ -371,7 +372,7 @@ html, body {
     .heroscreenshot{
       display: block;
       margin: 0 auto;
-      width: 60%;
+      width: 30%;
       padding:0.5rem;
       /* aspect-ratio:  9 / 16; */
     }
@@ -448,11 +449,11 @@ html, body {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 100%;
+        width: 50%;
         /* aspect-ratio:  9 / 16; */
       }
       .gridScanner{
-      gap:3rem;
+      gap:1rem;
       /* margin: 100px; */
       }
     }
@@ -848,3 +849,7 @@ html, body {
         /* padding: 0.5rem; */
       }
 
+      .moreSpace{
+        text-align: left;
+        padding-left: 3rem;
+      }
