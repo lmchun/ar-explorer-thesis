@@ -456,7 +456,7 @@ html, body {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        width: 80%;
         /* aspect-ratio:  9 / 16; */
       }
       .gridScanner{
@@ -777,6 +777,14 @@ html, body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+      }
+
+      .heroscreenshot{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        /* aspect-ratio:  9 / 16; */
       }
       .herocontainer{
         color:#115994;
