@@ -38,7 +38,7 @@ aNav.href="index.html";
 
 aNav5.innerText = "Search at Home"
 aNav5.href="database.html"
-aNav3.innerText = "Add your Experience"
+aNav3.innerText = "Add your AR"
 aNav3.href="qr.html"
 
 aNav4.innerText = "Discover Near You"
