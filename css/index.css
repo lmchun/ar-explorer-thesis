@@ -299,6 +299,11 @@ html, body {
       margin-top: 0px;
 
     }
+
+    .h3Space{
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+    }
     /* nav{ */
       
       /* margin-top: 2em; */
@@ -468,6 +473,10 @@ html, body {
       /* margin: 100px; */
       }
 
+      .h3Space{
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+      }
       .herotitle{
         font-size:50px !important;
         padding-bottom:5% !important;
@@ -724,7 +733,10 @@ html, body {
         color:darkblue;
         text-decoration-line: underline;
       }
-
+      .exptitle{
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+      }
       .exptitle:hover{
         text-decoration-line: underline;
       }

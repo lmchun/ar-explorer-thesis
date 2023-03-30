@@ -130,8 +130,6 @@ if(searchParams.has('id') == true){
 //////////////////////////////////////////////////////////////////////
             const detailImgTrack = page.querySelector("[data-detailImg]");
             const detailImgBullets = page.querySelector("[data-detailImgBullets]");
-
-
             // const glidecontainer  = document.createElement("div")
             // const glidetracker = document.createElement("div")
             const glideul = document.createElement("ul")
@@ -209,13 +207,21 @@ if(searchParams.has('id') == true){
             const authorSplit = xr.authors
             const authorUI = authorSplit.toString().replace(",", ", ");
             const cardLink = card.querySelector("[data-idCard]");
-            
+            let blurbpreview = xr.desc.substr(0, 120);
+        
+            if (blurbpreview.endsWith(".")) {
+            blurbpreview +="..";
+            }else if(blurbpreview.endsWith("")){
+              blurbpreview = blurbpreview.replace(/\s+$/, '');
+              blurbpreview +="...";
+            }
+
             let authorAmount = "Author:";
             if (xr.authors.length > 1 ){
                 authorAmount  = "Authors:"
             }
             header.innerHTML = `<a href="?id=${xr.id}"><h3 class="exptitle">${xr.title}</h3></a>`
-            body.innerHTML = `<button class="cardButton" onclick="window.location.href='?id=${xr.id}'"><p>${authorAmount} ${authorUI}</p><p>Platform: ${xr.platform}</p><p>${xr.desc}</p></a>`
+            body.innerHTML = `<button class="cardButton" onclick="window.location.href='?id=${xr.id}'"><p>${authorAmount} ${authorUI}</p><p>Platform: ${xr.platform}</p><p>${blurbpreview}</p></a>`
 
             urltn.innerHTML = `<img class="urltn" src="${xr.tn}">`
             xrsCardContainer.append(card);
