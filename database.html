@@ -17,9 +17,7 @@
     <nav id ="navLink">
       </nav>
         <hr>
-
-        <div class="contentpage">
-    <h1 class="headerPage">AR Finder </h1>
+ <h1 class="headerPage">AR Finder </h1>
 
     <!-- <div class="filters">
         <label for="myCheck">New York</label> 
@@ -31,9 +29,14 @@
         <!-- Type in a title or author to search for an experience. -->
             <!-- <p>Search for an AR experience.</p> -->
         <div class="search-wrapper">
-            <label><h3 class="h3Space">Search AR Experience</h3></label>
-            <label> Type in a location or title</label>
+            <div class="backgroundCardSearch">
+                 <!-- <label><h3 class="h3Space">Search AR Experience</h3></label> -->
+            <label class="searchLabel"> Type a location or title of an experience </label>
+            <div class="searchbarContainer">
             <input type="search" id="search" placeholder="New York" class="searchfield" data-search>
+            <button type="submit" class="buttonsearch" ><img src="assets/magnify-search.svg"></button>
+        </div>
+            </div>
         </div>
         <!-- <div class="container-btn">
             <div class="filterbuttons">
@@ -42,6 +45,8 @@
             </div>
         </div> -->
     </div>
+        <div class="contentpage">
+   
 
     <div class="xr-cards" data-xrs-container>
         </div>
@@ -79,6 +84,11 @@
 </template>
 <template data-xrs-page>
     <div class="xr-detail-page">
+        <div id="myModal" class="beforeYouGo modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+              </div>
+        </div>
         <div class="grid-page-container">
             <div class="grid-item">
                 <h1 class="title" data-title></h1>
@@ -92,8 +102,7 @@
                     </div>
                 </div>
                 <div class="container-btn">
-                    <div class="subheader"> How to view:</div>
-                    
+                    <h3 class="subheader"> How to view:</h3>
                     <div data-loc></div>
                     <div data-address></div>
                 </div>

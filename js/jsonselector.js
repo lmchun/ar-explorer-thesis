@@ -54,7 +54,6 @@ let xrs = []
 searchInput.addEventListener("input", (e)=>{
     const value = e.target.value.toLowerCase()
     xrs.forEach(xr => {
-        // console.log(value)
         const splitValue = value.split(",");
         const removeComma = splitValue.map(valueAll => valueAll.trim())
        console.log(removeComma)
@@ -90,11 +89,29 @@ if(searchParams.has('id') == true){
             const authorUI = authorSplit.toString().replace(",", ", ");
             const trybutton =  page.querySelector("[data-try]");
             // const lookbutton = page.querySelector("[data-doc]")
-            trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'">Try Experience</button>`
-            // trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'">Try ${xr.title}</button>`
-            // lookbutton.innerHTML = `<button class="buttonfilter" onclick="window.location.href='${xr.doc}'">Read Experience</button>`
-            // lookbutton.innerHTML = `<button class="buttonfilter" onclick="window.location.href='${xr.doc}'">Read about ${xr.title}</button>`
+            trybutton.innerHTML =  `<button class="buttonfilter">Try Experience</button>`
             
+
+            // Get the modal
+            let modal = page.querySelector("#myModal");
+            let btn = page.querySelector(".buttonfilter");
+            var span = page.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+
+
+            // ORIGINAL BUTTON GO TO EXPERIENCE LINK
+            // trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'">Try Experience</button>`
+
             // const local = xr.location;
             // if(xr.location == "NA"){
             //     location = ;}
@@ -113,9 +130,7 @@ if(searchParams.has('id') == true){
             platform.innerHTML = `<span>Platform: ${xr.platform}</span>`
             desc.textContent = xr.desc;
             alt.textContent = xr.tnalt;
-            authors.innerHTML = `<span>Authors: ${authorUI}</span>`
-            // body.innerHTML = `<p>Authors: ${authorUI}</p><button onclick="window.location.href='${xr.url}'">Try ${xr.title}</button>`
-            // urltn.src = xr.tn;           
+            authors.innerHTML = `<span>Authors: ${authorUI}</span>`      
             const intr = page.querySelector("[data-intro]");
             const deta = page.querySelector("[data-detail]");
             const detafull = page.querySelector("[data-detailfull]");
@@ -125,7 +140,6 @@ if(searchParams.has('id') == true){
             let detailMore = detailfull.substr(151,1000);
             deta.textContent = detailpreview;
             detafull.textContent = detailMore;
-            // // // urltn.href = xr.url
              let imglink = xr.detimg;
 //////////////////////////////////////////////////////////////////////
             const detailImgTrack = page.querySelector("[data-detailImg]");
@@ -182,6 +196,87 @@ if(searchParams.has('id') == true){
             //     // glideul.appendChild(imgdetail)
             //     glideul.innerHTML += "<li class='glide__slide'>" + imgdetail + "</li>"
             //  }
+
+            ///////////////////this is the modal popup///////////////////
+            //preview base
+          // let headThumb = document.createElement("div")
+           // let scanTitle = document.createElement("h3")
+           // let directBtn = document.createElement("button")
+          //  let scanGenre = document.createElement("p")
+          // let tryBtn = document.createElement("button")
+           // scanTitle.setAttribute("data-title","")
+          // scanTitle.setAttribute("class", "titleMobile")
+
+
+          let beforeYouGoPopup = page.querySelector(".modal-content")
+          let headMobile = document.createElement("div")
+          beforeYouGoPopup.appendChild(headMobile)
+          
+          let headTitleText = document.createElement("div")
+         
+          let beforeHeader= document.createElement("h3")
+          let scanPlatform = document.createElement("p");
+         
+          let scanAddress = document.createElement("p")
+          let platformIcon = document.createElement("img")
+     
+         
+// onclick="window.location.href='${xr.url}'"
+         
+          scanAddress.setAttribute("data-address", "")
+          scanAddress.setAttribute("class", "subinfoMobile")
+            beforeHeader.innerText = "Before You Go!"
+          // scanTitle.innerText = xr.title
+          if(xr.address !== "NA"){
+           scanAddress.innerHTML = `<span><img src="assets/checkmark.png"> Located at: ${xr.address}</span>`  
+          }
+          headMobile.appendChild(headTitleText)
+          headTitleText.appendChild(beforeHeader)
+          headTitleText.appendChild(scanAddress)
+
+          function checkPlatform(){
+            if(xr.platform == "Adobe Aero"){
+              scanPlatform.innerHTML = `<span>Download ${xr.platform}</span>`
+              platformIcon.src = "https://s6.imgcdn.dev/rzzaD.png"
+
+            }else if(xr.platform == "Snapchat"){
+
+              platformIcon.src="https://s6.imgcdn.dev/rzat9.png"
+
+            }else if(xr.platform == "Instagram"){
+
+              platformIcon.src="https://s6.imgcdn.dev/rzlcT.png"
+
+            }else if(xr.platform == "AR Poise"){
+
+            }else if(xr.platform == "Test Flight"){
+
+            }else if(xr.platform == "Acute Art App"){
+
+            }else if(xr.platform == "Dreamground App"){
+
+            }else if(xr.platform == "New York Times App"){
+
+            }else if(xr.platform == "Hoverlay"){
+
+            }
+          }
+          
+          // headTitleText.appendChild(scanTitle)
+          // headTitleText.appendChild(scanGenre)
+          
+
+          // headMobile.appendChild(headThumb)
+          // tryBtn.setAttribute("onclick", "tryAr()")
+          // 
+          // headMobile.appendChild(tryBtn)
+          // tryBtn.innerHtml = `<img src=“”>Try out `
+          // directBtn.setAttribute("onclick", "mapAr()")
+          // directBtn.innerHtml = `<img src="">Directions `
+
+
+
+
             xrsPageContainer.append(page);
     }) 
     .then(() => glide.mount());
