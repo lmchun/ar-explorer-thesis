@@ -103,6 +103,7 @@ html, body {
     padding-bottom: 8rem;
     background-image: url("../assets/heroimage-map.png");
     background-repeat: no-repeat;
+    background-size: 100%;
     /* background-attachment: fixed; */
     background-position: center;
     width:100%;
@@ -137,7 +138,7 @@ html, body {
   /* margin: 0rem 5rem; */
   /* padding: 0rem 2rem; */
   border: 1px solid rgba(0, 0, 0, 0);
-  width:15rem;
+  width:100%;
   /* font-size:16px; */
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
@@ -145,7 +146,7 @@ html, body {
 
 .searchbarContainer{
   gap:0rem;
-  margin: 0rem 15rem;
+  /* margin: 0rem 15rem; */
   display: flex;
   border: 1px solid rgb(0, 0, 0);
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -542,9 +543,14 @@ html, body {
         font-size: 1.4rem;
         padding-bottom: 1rem;
       }
+      /* .searchbarContainer{
+        gap:0rem;
+        margin: 0rem 0rem;
+      } */
       .searchfield{
         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin: 0rem 1rem;
+        /* margin: 0rem 1rem; */
+        width:100%;
         /* font-size:16px; */
         /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
         /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
