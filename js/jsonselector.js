@@ -92,21 +92,21 @@ if(searchParams.has('id') == true){
             trybutton.innerHTML =  `<button class="buttonfilter">Try Experience</button>`
             
 
-            // Get the modal
-            let modal = page.querySelector("#myModal");
-            let btn = page.querySelector(".buttonfilter");
-            var span = page.getElementsByClassName("close")[0];
-            btn.onclick = function() {
-              modal.style.display = "block";
-            }
-            span.onclick = function() {
-              modal.style.display = "none";
-            }
-            window.onclick = function(event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
-              }
-            }
+            // // Get the modal
+            // let modal = page.querySelector("#myModal");
+            // let btn = page.querySelector(".buttonfilter");
+            // var span = page.getElementsByClassName("close")[0];
+            // btn.onclick = function() {
+            //   modal.style.display = "block";
+            // }
+            // span.onclick = function() {
+            //   modal.style.display = "none";
+            // }
+            // window.onclick = function(event) {
+            //   if (event.target == modal) {
+            //     modal.style.display = "none";
+            //   }
+            // }
 
 
             // ORIGINAL BUTTON GO TO EXPERIENCE LINK
@@ -208,31 +208,31 @@ if(searchParams.has('id') == true){
           // scanTitle.setAttribute("class", "titleMobile")
 
 
-          let beforeYouGoPopup = page.querySelector(".modal-content")
-          let headMobile = document.createElement("div")
-          beforeYouGoPopup.appendChild(headMobile)
+          // let beforeYouGoPopup = page.querySelector(".modal-content")
+          // let headMobile = document.createElement("div")
+          // beforeYouGoPopup.appendChild(headMobile)
           
-          let headTitleText = document.createElement("div")
+          // let headTitleText = document.createElement("div")
          
-          let beforeHeader= document.createElement("h3")
-          let scanPlatform = document.createElement("p");
+          // let beforeHeader= document.createElement("h3")
+          // let scanPlatform = document.createElement("p");
          
-          let scanAddress = document.createElement("p")
-          let platformIcon = document.createElement("img")
+          // let scanAddress = document.createElement("p")
+          // let platformIcon = document.createElement("img")
      
          
 // onclick="window.location.href='${xr.url}'"
          
-          scanAddress.setAttribute("data-address", "")
-          scanAddress.setAttribute("class", "subinfoMobile")
-            beforeHeader.innerText = "Before You Go!"
-          // scanTitle.innerText = xr.title
-          if(xr.address !== "NA"){
-           scanAddress.innerHTML = `<span><img src="assets/checkmark.png"> Located at: ${xr.address}</span>`  
-          }
-          headMobile.appendChild(headTitleText)
-          headTitleText.appendChild(beforeHeader)
-          headTitleText.appendChild(scanAddress)
+          // scanAddress.setAttribute("data-address", "")
+          // scanAddress.setAttribute("class", "subinfoMobile")
+          //   beforeHeader.innerText = "Before You Go!"
+          // // scanTitle.innerText = xr.title
+          // if(xr.address !== "NA"){
+          //  scanAddress.innerHTML = `<span><img src="assets/checkmark.png"> Located at: ${xr.address}</span>`  
+          // }
+          // headMobile.appendChild(headTitleText)
+          // headTitleText.appendChild(beforeHeader)
+          // headTitleText.appendChild(scanAddress)
 
           function checkPlatform(){
             if(xr.platform == "Adobe Aero"){
