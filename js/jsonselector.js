@@ -34,6 +34,7 @@ const xrsCardContainer = document.querySelector("[data-xrs-container]");
 const xrsPageTemplate = document.querySelector("[data-xrs-page]");
 const xrsPageContainer = document.querySelector("[data-xrs-page-container]");
 let xrs = []
+const errMessage = document.querySelector(".errMessage");
 
 // checkBox.addEventListener("change", (e)=>{
 //   function isNewYork (address) {
@@ -65,8 +66,13 @@ searchInput.addEventListener("input", (e)=>{
         }
         // const isVisible = xr.title.toLowerCase().includes(value) || xr.platform.toLowerCase().includes(value)  || xr.type.toLowerCase().includes(value) || hasAuthor(value,xr.authors) || xr.address.toLowerCase().includes(value) || xr.location.toLowerCase().includes(value) 
         const isVisible = xr.title.toLowerCase().includes(removeComma) || xr.platform.toLowerCase().includes(removeComma)  || xr.type.toLowerCase().includes(removeComma) || hasAuthor(removeComma,xr.authors) || xr.address.toLowerCase().includes(removeComma) || xr.location.toLowerCase().includes(removeComma) 
-        xr.element.classList.toggle("hide", !isVisible)
+        xr.element.classList.toggle("hide", !isVisible);
     })
+        //if no result then show "no results"
+    // if(  xr.element.classList == 0){
+    //toggle for specifically not hidden so how do we count these?
+    console.log();
+    // }
 })
 const searchParams = new URLSearchParams(location.search);
 // use the end https://(DOMAIN)/qr/database.html?id=3

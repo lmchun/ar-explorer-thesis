@@ -1063,3 +1063,17 @@ html, body {
   text-decoration: none;
   cursor: pointer;
 }
+
+.scantry{
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 5em; */
+    padding:0% 43%;
+}
+
+.errMessage{
+  display: none;
+   margin-left: auto;
+    margin-right: auto;
+    padding: 0% 40%;
+}
