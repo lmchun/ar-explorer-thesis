@@ -81,7 +81,7 @@ if(searchParams.has('id') == true){
             const year = page.querySelector("[data-year]");
             const genre = page.querySelector("[data-genre]");
             const platform = page.querySelector("[data-platform]");
-            // const urltn = page.querySelector("[data-urltn]");
+            const tn = page.querySelector("[data-tn]");
             const desc = page.querySelector("[data-desc]");
             const alt = page.querySelector("[data-caption]");
             const authors = page.querySelector("[data-authors]");
@@ -91,46 +91,28 @@ if(searchParams.has('id') == true){
             // const lookbutton = page.querySelector("[data-doc]")
             trybutton.innerHTML =  `<button class="buttonfilter">Try Experience</button>`
             
-
-            // // Get the modal
-            // let modal = page.querySelector("#myModal");
-            // let btn = page.querySelector(".buttonfilter");
-            // var span = page.getElementsByClassName("close")[0];
-            // btn.onclick = function() {
-            //   modal.style.display = "block";
-            // }
-            // span.onclick = function() {
-            //   modal.style.display = "none";
-            // }
-            // window.onclick = function(event) {
-            //   if (event.target == modal) {
-            //     modal.style.display = "none";
-            //   }
-            // }
-
-
             // ORIGINAL BUTTON GO TO EXPERIENCE LINK
             // trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'">Try Experience</button>`
-
+            tn.src= xr.tn;
             // const local = xr.location;
             // if(xr.location == "NA"){
             //     location = ;}
-            const location = page.querySelector("[data-loc]");
-            location.innerHTML = `<span>Location: ${xr.location} </span>`
+            // const location = page.querySelector("[data-loc]");
+            // location.innerHTML = `<span>Location: ${xr.location} </span>`
             // location.innerHTML = `<span>Location: ${local} </span>`
-            const address = page.querySelector("[data-address]");
-            address.innerHTML = `<span>Address: ${xr.address} </span>`
-            const requirements = page.querySelector("[data-requirements]")
-            requirements.innerHTML = `<p>App Requirements: ${xr.requirements}</p>`
+            // const address = page.querySelector("[data-address]");
+            // address.innerHTML = `<span>Address: ${xr.address} </span>`
+            // const requirements = page.querySelector("[data-requirements]")
+            // requirements.innerHTML = `<p>App Requirements: ${xr.requirements}</p>`
             const detailimages = page.querySelector('[data-detimg');
             // detailimages.src = xr.detimg;
             title.textContent = xr.title;
-            year.innerHTML = `<span>${xr.year}</span>`
-            genre.innerHTML = `<span>Genre: ${xr.genre}</span>`
-            platform.innerHTML = `<span>Platform: ${xr.platform}</span>`
+            // year.innerHTML = `<span>${xr.year}</span>`
+            // genre.innerHTML = `<span>Genre: ${xr.genre}</span>`
+            // platform.innerHTML = `<span>Platform: ${xr.platform}</span>`
             desc.textContent = xr.desc;
-            alt.textContent = xr.tnalt;
-            authors.innerHTML = `<span>Authors: ${authorUI}</span>`      
+            // alt.textContent = xr.tnalt;
+            // authors.innerHTML = `<span>Authors: ${authorUI}</span>`      
             const intr = page.querySelector("[data-intro]");
             const deta = page.querySelector("[data-detail]");
             const detafull = page.querySelector("[data-detailfull]");
@@ -198,13 +180,13 @@ if(searchParams.has('id') == true){
             //  }
 
             ///////////////////this is the modal popup///////////////////
-            //preview base
+          //preview base
           // let headThumb = document.createElement("div")
-           // let scanTitle = document.createElement("h3")
-           // let directBtn = document.createElement("button")
+          // let scanTitle = document.createElement("h3")
+          // let directBtn = document.createElement("button")
           //  let scanGenre = document.createElement("p")
           // let tryBtn = document.createElement("button")
-           // scanTitle.setAttribute("data-title","")
+          // scanTitle.setAttribute("data-title","")
           // scanTitle.setAttribute("class", "titleMobile")
 
 

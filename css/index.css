@@ -1063,3 +1063,27 @@ html, body {
   text-decoration: none;
   cursor: pointer;
 }
+
+.headerdet{
+  display: flex;
+}
+
+.tndet{
+    height: 150px;
+    width: 150px;
+    margin-top: 2rem;
+    /* width: 20vw; height: 20vw;  */
+    object-fit: cover;
+    /* object-fit: none; */
+    /* object-position: 100% 0; */
+    border-radius: 0.2rem;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.headerText{
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 1rem;
+  /* width: 10rem; */
+}

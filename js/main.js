@@ -27,7 +27,7 @@ liNav3.classList.add("headertext");
 liNav4.classList.add("headertext");
 liNav5.classList.add("headertext");
 // const navhrefs = ['index.html','scanner.html','database.html','qr.html']
-aNav.innerHTML = `<img src="assets/ardiscoveryicon.png" class="icon" alt="a pin on a map in AR on a phone."> <span class="icontext">AR Discovery Hub</span>`
+aNav.innerHTML = `<img src="assets/ardiscoveryicon.png" class="icon" alt="a pin on a map in AR on a phone."> <span class="icontext">AR Explorer</span>`
 aNav.classList.add("iconVert");
 aNav.href="index.html";
 
