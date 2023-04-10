@@ -1,4 +1,4 @@
-const config = {
+/*const config = {
     type: "carousel",
     gap: 15, // add a 15px gap between slides
     peek: {
@@ -26,7 +26,7 @@ const config = {
       // initialize the Bullets component
     // bullets: '.glide__bullet',
   };
-const glide = new Glide('.glide', config);
+const glide = new Glide('.glide', config);*/
 const checkBox = document.querySelector("#localSearch")
 const searchInput = document.querySelector("[data-search]")
 const xrsCardTemplate = document.querySelector("[data-xrs-cards]");
@@ -78,13 +78,13 @@ if(searchParams.has('id') == true){
             let xr = data;
             const page = xrsPageTemplate.content.cloneNode(true).children[0]
             const title = page.querySelector("[data-title]");
-            const year = page.querySelector("[data-year]");
-            const genre = page.querySelector("[data-genre]");
-            const platform = page.querySelector("[data-platform]");
+            // const year = page.querySelector("[data-year]");
+            // const genre = page.querySelector("[data-genre]");
+            // const platform = page.querySelector("[data-platform]");
             const tn = page.querySelector("[data-tn]");
             const desc = page.querySelector("[data-desc]");
             const alt = page.querySelector("[data-caption]");
-            const authors = page.querySelector("[data-authors]");
+            // const authors = page.querySelector("[data-authors]");
             const authorSplit = xr.authors
             const authorUI = authorSplit.toString().replace(",", ", ");
             const trybutton =  page.querySelector("[data-try]");
@@ -123,7 +123,7 @@ if(searchParams.has('id') == true){
             detafull.textContent = detailMore;
              let imglink = xr.detimg;
 //////////////////////////////////////////////////////////////////////
-            const detailImgTrack = page.querySelector("[data-detailImg]");
+           /* const detailImgTrack = page.querySelector("[data-detailImg]");
             const detailImgBullets = page.querySelector("[data-detailImgBullets]");
             // const glidecontainer  = document.createElement("div")
             // const glidetracker = document.createElement("div")
@@ -163,7 +163,7 @@ if(searchParams.has('id') == true){
                 detailImgBullets.appendChild(glideButton)
                 // glideControllers.appendChild(glideButton)
 
-            }
+            }*/
                         //need to append the images to the lis 
             //  for(imglist = 0; imglist<imglink.length; imglist++ ){
             //      let imgdetail = document.createElement("img");
@@ -260,7 +260,7 @@ if(searchParams.has('id') == true){
 
             xrsPageContainer.append(page);
     }) 
-    .then(() => glide.mount());
+    // .then(() => glide.mount());
 
     
     let showBar = document.getElementById("searchbar");
