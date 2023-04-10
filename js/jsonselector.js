@@ -90,7 +90,6 @@ if(searchParams.has('id') == true){
             const trybutton =  page.querySelector("[data-try]");
             // const lookbutton = page.querySelector("[data-doc]")
             trybutton.innerHTML =  `<button class="buttonfilter">Try Experience</button>`
-            
             // ORIGINAL BUTTON GO TO EXPERIENCE LINK
             // trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'">Try Experience</button>`
             tn.src= xr.tn;

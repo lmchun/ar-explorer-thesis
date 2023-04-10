@@ -5,40 +5,39 @@ ulNav.classList.add("topnav");
 ulNav.id = "top";
 const liNav = document.createElement("li");
 const liNav3 = document.createElement("li");
-const liNav4 = document.createElement("li");
+// const liNav4 = document.createElement("li");
 const liNav5 = document.createElement("li");
 const aNav = document.createElement("a");
 const aNav2 = document.createElement("a");
 const aNav3 = document.createElement("a");
-const aNav4 = document.createElement("a");
+// const aNav4 = document.createElement("a");
 const aNav5 = document.createElement("a");
 ulNav.appendChild(liNav);
 ulNav.appendChild(liNav3);
-ulNav.appendChild(liNav4);
+// ulNav.appendChild(liNav4);
 ulNav.appendChild(liNav5);
 liNav.appendChild(aNav);
 liNav3.appendChild(aNav3);
-liNav4.appendChild(aNav4);
+// liNav4.appendChild(aNav4);
 liNav5.appendChild(aNav5);
 liNav3.classList.add("right");
-liNav4.classList.add("right");
+// liNav4.classList.add("right");
 liNav5.classList.add("right");
 liNav3.classList.add("headertext");
-liNav4.classList.add("headertext");
-liNav5.classList.add("headertext");
+// liNav4.classList.add("headertext");
+// liNav5.classList.add("headertext");
 // const navhrefs = ['index.html','scanner.html','database.html','qr.html']
-aNav.innerHTML = `<img src="assets/ardiscoveryicon.png" class="icon" alt="a pin on a map in AR on a phone."> <span class="icontext">AR Explorer</span>`
+aNav.innerHTML = `<img src="assets/arexplorerIcon.png" class="icon" alt="a pin on a map in AR on a phone."> <span class="icontext">AR Explorer</span>`
 aNav.classList.add("iconVert");
 aNav.href="index.html";
-
-
-aNav5.innerText = "Search at Home"
+aNav5.classList.add("headertext2");
+aNav5.innerText = "Explore"
 aNav5.href="database.html"
 aNav3.innerText = "Add your AR"
 aNav3.href="qr.html"
 
-aNav4.innerText = "Discover Near You"
-aNav4.href="scanner.html"
+// aNav4.innerText = "Discover Near You"
+// aNav4.href="scanner.html"
 
 //////////
 const screen = {
