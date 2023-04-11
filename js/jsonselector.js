@@ -93,6 +93,31 @@ if(searchParams.has('id') == true){
             // ORIGINAL BUTTON GO TO EXPERIENCE LINK
             // trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'">Try Experience</button>`
             tn.src= xr.tn;
+            const googleMap = page.querySelector("[data-map]")
+            if(xr.map == "NA"){
+              if (navigator.geolocation) {
+                //alert("Allowed");
+                navigator.geolocation.watchPosition(successCallback, errorCallback, {});
+                function successCallback(currentPosition) {
+                  // alert(currentPosition.coords.latitude + ","+ currentPosition.coords.longitude);
+                let lat = currentPosition.coords.latitude,
+                    long = currentPosition.coords.longitude;
+
+                    googleMap.src = "http://maps.googleapis.com/maps/api/staticmap?markers=" + lat + ',' + long + "&zoom=18&size=400x400&markers=color:red%7Clabel:DoyerSt%7C" + lat + ',' + long + "&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE";					
+                }
+        
+                function errorCallback(e) {
+                  alert(e);
+                }
+        
+              } else {
+                //alert("Not Allowed");
+              }
+            }else{
+              googleMap.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + xr.map +"&zoom=18&size=400x400&markers=color:red%7Clabel:DoyerSt%7C"+ xr.map +"&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE"
+            }
+            console.log(googleMap.src)
+
             // const local = xr.location;
             // if(xr.location == "NA"){
             //     location = ;}
