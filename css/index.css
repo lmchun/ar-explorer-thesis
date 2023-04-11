@@ -877,7 +877,7 @@ html, body {
       }
 
       .herocontent{
-        background-image:url("/assets/hero-image-placementLOWER.svg");
+        background-image:url("../assets/hero-image-placementLOWER.svg");
         background-color: black;
         background-repeat: no-repeat;
         /* background-attachment: fixed; */
@@ -1142,7 +1142,7 @@ html, body {
   height:70%;
 }
 .checkMarks{
-  list-style: url('/assets/checkmark.svg');
+  list-style: url('../assets/checkmark.svg');
 }
 .whiteBack{
   border: 1px solid white;
@@ -1195,4 +1195,38 @@ html, body {
 #navLink{
   color:white;
   background-color: #000000;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 1rem 1rem;
+  position: absolute;
+  z-index: 1;
+  top: -50px;
+  left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
