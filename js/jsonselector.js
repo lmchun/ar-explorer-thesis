@@ -89,7 +89,12 @@ if(searchParams.has('id') == true){
             const authorUI = authorSplit.toString().replace(",", ", ");
             const trybutton =  page.querySelector("[data-try]");
             // const lookbutton = page.querySelector("[data-doc]")
-            trybutton.innerHTML =  `<button class="buttonfilter">Try Experience</button>`
+            trybutton.innerHTML =  `<button class="buttonfilter"><img id="platformChecker">Try Experience on ${xr.platform}</button>`
+                      // if(){
+
+          // }
+
+            
             // ORIGINAL BUTTON GO TO EXPERIENCE LINK
             // trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'">Try Experience</button>`
             tn.src= xr.tn;
@@ -288,10 +293,13 @@ if(searchParams.has('id') == true){
             const header = card.querySelector("[data-header]");
             const body = card.querySelector("[data-body]");
             const urltn = card.querySelector("[data-urltn]");
+            const mapModule = card.querySelector("[data-maptn]")
             const authorSplit = xr.authors
             const authorUI = authorSplit.toString().replace(",", ", ");
             const cardLink = card.querySelector("[data-idCard]");
             let blurbpreview = xr.desc.substr(0, 120);
+
+            urltn.innerHTML = `<img class="urltn" src="${xr.tn}">`
         
             if (blurbpreview.endsWith(".")) {
             blurbpreview +="..";
@@ -304,10 +312,31 @@ if(searchParams.has('id') == true){
             if (xr.authors.length > 1 ){
                 authorAmount  = "Authors:"
             }
-            header.innerHTML = `<a href="?id=${xr.id}"><h3 class="exptitle">${xr.title}</h3></a>`
-            body.innerHTML = `<button class="cardButton" onclick="window.location.href='?id=${xr.id}'"><p>${authorAmount} ${authorUI}</p><p>Platform: ${xr.platform}</p><p>${blurbpreview}</p></a>`
+            header.innerHTML = `<a href="?id=${xr.id}">
+            <h3 class="exptitle">${xr.title}</h3>
+            </a>`
+            body.innerHTML = 
+            `<p>${authorAmount} ${authorUI}</p>
+            <p>Platform: ${xr.platform}</p>
+            <p>${blurbpreview}</p>
+            <button class="" onclick="window.location.href='${xr.url}'">
+            Try
+            </button>
+            <button class="" onclick="window.location.href='?id=${xr.id}'">
+            Detail
+            </button>
+            `
+            if(xr.map !== "NA"){
+              mapModule.innerHTML = `
+              <img src="https://maps.googleapis.com/maps/api/staticmap?center=${xr.map}&zoom=18&size=400x400&markers=color:red%7Clabel:DoyerSt%7C6DoyersSt&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE">
+              `
+            }else{
 
-            urltn.innerHTML = `<img class="urltn" src="${xr.tn}">`
+            }
+          
+
+
+
             xrsCardContainer.append(card);
             return{
                 title: xr.title, url: xr.url, platform: xr.platform, type: xr.type, element : card, authors: xr.authors, address: xr.address, location:xr.location

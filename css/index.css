@@ -578,14 +578,12 @@ html, body {
         
     }
     }
-   
+    
     @media screen and (max-width:600px){
       .grid-page-container {
         flex-wrap: wrap;
         gap: 0rem;
       }
-    
-
     }
 
     @media screen and (min-width:1000px){
@@ -611,6 +609,7 @@ html, body {
     .grid-page-container {
       /* display: grid; */
       display: flex;
+      justify-content: space-around;
       /* column-gap: 50px; */
       /* grid-template-columns: 2fr 2fr; */
       padding: 10px;
@@ -779,6 +778,7 @@ html, body {
 
       .buttonfilter{
         color:white;
+        font-size: 20px;;
         /* margin-top:15px; */
         padding:0.7rem 2rem;
         background-color: #115994;
