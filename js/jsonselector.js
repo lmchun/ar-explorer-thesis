@@ -78,7 +78,6 @@ if(searchParams.has('id') == true){
             let xr = data;
             const page = xrsPageTemplate.content.cloneNode(true).children[0]
             const title = page.querySelector("[data-title]");
-            // const year = page.querySelector("[data-year]");
             // const genre = page.querySelector("[data-genre]");
             // const platform = page.querySelector("[data-platform]");
             const tn = page.querySelector("[data-tn]");
@@ -90,9 +89,7 @@ if(searchParams.has('id') == true){
             const trybutton =  page.querySelector("[data-try]");
             // const lookbutton = page.querySelector("[data-doc]")
             trybutton.innerHTML =  `<button class="buttonfilter"><img id="platformChecker">Try Experience on ${xr.platform}</button>`
-                      // if(){
 
-          // }
 
             
             // ORIGINAL BUTTON GO TO EXPERIENCE LINK
@@ -308,30 +305,34 @@ if(searchParams.has('id') == true){
               blurbpreview +="...";
             }
 
-            let authorAmount = "Author:";
+            let authorAmount = "Creator:";
             if (xr.authors.length > 1 ){
-                authorAmount  = "Authors:"
+                authorAmount  = "Creators:"
             }
             header.innerHTML = `<a href="?id=${xr.id}">
             <h3 class="exptitle">${xr.title}</h3>
             </a>`
             body.innerHTML = 
-            `<p>${authorAmount} ${authorUI}</p>
-            <p>Platform: ${xr.platform}</p>
+            `<p><img class="cardIcon" src="assets/creator.svg">${authorAmount} ${authorUI}</p>
+            <span>Platform: ${xr.platform}</span>
+            
             <p>${blurbpreview}</p>
-            <button class="" onclick="window.location.href='${xr.url}'">
-            Try
+            <button class="button" onclick="window.location.href='${xr.url}'">
+            Try at Home
             </button>
-            <button class="" onclick="window.location.href='?id=${xr.id}'">
+            <button class="button" onclick="window.location.href='?id=${xr.id}'">
             Detail
             </button>
             `
             if(xr.map !== "NA"){
               mapModule.innerHTML = `
               <img src="https://maps.googleapis.com/maps/api/staticmap?center=${xr.map}&zoom=18&size=400x400&markers=color:red%7Clabel:DoyerSt%7C6DoyersSt&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE">
+              <p>${xr.address}</p>
               `
             }else{
-
+              mapModule.innerHTML = `
+              <p>Try Anywhere</p>
+              `
             }
           
 
