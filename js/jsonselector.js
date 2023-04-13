@@ -326,7 +326,7 @@ if(searchParams.has('id') == true){
             `
             if(xr.map !== "NA"){
               mapModule.innerHTML = `
-              <img src="https://maps.googleapis.com/maps/api/staticmap?center=${xr.map}&zoom=18&size=400x400&markers=color:red%7Clabel:DoyerSt%7C6DoyersSt&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE">
+              <img src="https://maps.googleapis.com/maps/api/staticmap?center=${xr.map}&zoom=18&size=200x200&markers=color:red%7Clabel:DoyerSt%7C6DoyersSt&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE">
               <p>${xr.address}</p>
               `
             }else{
