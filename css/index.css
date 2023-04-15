@@ -1126,8 +1126,8 @@ html, body {
 }
 
 .gridContentHero{
-  padding: 3rem 3rem;
-  margin: 1rem;
+  padding: 2rem 2rem;
+  margin: 0.2rem;
 }
 
 .herocontent2{
@@ -1138,9 +1138,8 @@ html, body {
   /* background-color: #42595E; */
   background-position: center;
   width:100%;
-  /* background-size: 10%; */
-  /* height:50%; */
-  height:70%;
+  display: flex;
+  justify-content: space-evenly;
 }
 .checkMarks{
   list-style: url('../assets/checkmark.svg');
@@ -1160,10 +1159,9 @@ html, body {
   /* background-attachment: fixed; */
   background-color: #888;
   background-position: center;
-  width:100%;
-  /* background-size: 10%; */
-  /* height:50%; */
-  height:90%;
+  /* width:100%; */
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .formcontent{
@@ -1243,4 +1241,29 @@ html, body {
 
 .cardMain{
   width: 40vw;
+}
+
+.anywhereBtn{
+  padding: 7.5vw;
+  background-color: #777;
+  /* color:red; */
+}
+.indexImage{
+  width:40vw;
+}
+
+.screenshotImage{
+  width: 25vw;
+  padding: 0rem 1rem;
+}
+
+.heroIconImage{
+  width: 20vw;
+}
+
+.featureHeader{
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+  padding-top: 0.2rem;
 }

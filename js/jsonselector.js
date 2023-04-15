@@ -331,7 +331,7 @@ if(searchParams.has('id') == true){
               `
             }else{
               mapModule.innerHTML = `
-              <p>Try Anywhere</p>
+              <p class="anywhereBtn">Try Anywhere</p>
               `
             }
           
