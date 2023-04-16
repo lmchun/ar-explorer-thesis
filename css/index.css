@@ -1128,6 +1128,7 @@ html, body {
 .gridContentHero{
   padding: 2rem 2rem;
   margin: 0.2rem;
+  /* width: 300px; */
 }
 
 .herocontent2{
@@ -1172,6 +1173,7 @@ html, body {
 
 .gridHero{
   display: flex;
+  flex-wrap:wrap;
 }
 
 .tryAR{
@@ -1257,13 +1259,50 @@ html, body {
   padding: 0rem 1rem;
 }
 
-.heroIconImage{
-  width: 20vw;
-}
-
 .featureHeader{
   text-align: center;
   font-size: 32px;
   margin: 0;
   padding-top: 0.2rem;
+}
+
+.heroIconContainer{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  /* margin-bottom: 1rem; */
+}
+.featureP{
+  text-align: center;
+}
+
+.mobileContainer{
+  background-color: white;
+  border: 1px white solid;
+  padding: 0rem 1rem;
+  border-radius: 0.2rem;
+  width:70%;
+}
+.heroIconImage{
+  width: 200px;
+  /* width: 20vw; */
+}
+.containerFeature{
+  display: flex;
+  flex-wrap: wrap;
+}
+.boxfeature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+  height: 300px;
+  margin: 2rem 1rem;
+}
+@media (max-width: 768px) {
+  .containerFeature {
+    flex-direction: column;
+  }
 }
