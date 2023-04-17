@@ -98,7 +98,7 @@ if(searchParams.has('id') == true){
               const mapAddress = document.createElement("p")
               const  directionBtn= document.createElement("span")
               mapComponent.appendChild(googleMap)
-              googleMap.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + xr.map +"&zoom=18&size=400x400&markers=icon:https://lc4726.itp.io/qr/assets/locationofaricon.g%7C"+ xr.map +"&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE"
+              googleMap.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + xr.map +"&zoom=18&size=400x400&markers=icon:https://lc4726.itp.io/qr/assets/foundARmap.png"+ "%7C"+ xr.map +"&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE"
               googleMap.classList.add("mapScale")
               mapAddress.innerHTML = `${xr.address}`
               mapComponent.appendChild(mapAddress)
@@ -346,7 +346,7 @@ if(searchParams.has('id') == true){
             console.log(flexMapModule)
             if(xr.map !== "NA"){
               mapModule.innerHTML = `
-              <img src="https://maps.googleapis.com/maps/api/staticmap?center=${xr.map}&zoom=18&size=400x400&markers=icon:https://lc4726.itp.io/qr/assets/locationofaricon.png%7C6DoyersSt&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE">
+              <img src="https://maps.googleapis.com/maps/api/staticmap?center=${xr.map}&zoom=18&size=200x200&markers=icon:https://lc4726.itp.io/qr/assets/foundARmap.png%7C${xr.map}&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE">
               <p class="">${xr.address}</p>
               `
             }else{
