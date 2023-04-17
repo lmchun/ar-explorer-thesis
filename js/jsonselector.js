@@ -87,21 +87,38 @@ if(searchParams.has('id') == true){
             const authorSplit = xr.authors
             const authorUI = authorSplit.toString().replace(",", ", ");
             const trybutton =  page.querySelector("[data-try]");
-            // const lookbutton = page.querySelector("[data-doc]")
             trybutton.innerHTML =  `<button class="buttonfilter"><img id="platformChecker">Try Experience on ${xr.platform}</button>`
 
-
-            
             // ORIGINAL BUTTON GO TO EXPERIENCE LINK
             // trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'">Try Experience</button>`
             tn.src= xr.tn;
             if(xr.map !== "NA"){
               const mapComponent = page.querySelector("[data-map]")
               const googleMap = document.createElement("img")
+              const mapAddress = document.createElement("p")
+              const  directionBtn= document.createElement("span")
               mapComponent.appendChild(googleMap)
               googleMap.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + xr.map +"&zoom=18&size=400x400&markers=color:red%7Clabel:DoyerSt%7C"+ xr.map +"&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE"
-              // console.log(googleMap.src)
+              googleMap.classList.add("mapScale")
+              mapAddress.innerHTML = `${xr.address}`
+              mapComponent.appendChild(mapAddress)
+              mapComponent.appendChild(directionBtn)
+              directionBtn.innerHTML=`<button class="directBtn" onclick="window.location.href='${xr.googleMap}'"> <img class="iconMap"src="assets/mapicon.svg"> <span> Directions <span> </button>`
             }
+            const creators = page.querySelector("[data-creator]")
+            const typeofAR = page.querySelector("[data-typeAR")
+            const keyword = page.querySelector("[data-keyword]")
+            const keywordSplit = xr.keywords
+            const keywordList = keywordSplit.toString().replace(", ", ", ");
+
+            creators.innerHTML = `${xr.authors}`
+            typeofAR.innerHTML = `${xr.type}`
+            keyword.innerHTML = `${keywordList}`
+            const typeofARIcon = page.querySelector("#typeIcon")
+            if(xr.type == "World Effect"){
+              typeofARIcon.src = "assets/worldeffect.svg"
+            }
+
 
             // const local = xr.location;
             // if(xr.location == "NA"){
@@ -131,7 +148,7 @@ if(searchParams.has('id') == true){
             let detailMore = detailfull.substr(151,1000);
             deta.textContent = detailpreview;
             detafull.textContent = detailMore;
-             let imglink = xr.detimg;
+            let imglink = xr.detimg;
 //////////////////////////////////////////////////////////////////////
            /* const detailImgTrack = page.querySelector("[data-detailImg]");
             const detailImgBullets = page.querySelector("[data-detailImgBullets]");

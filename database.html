@@ -94,25 +94,42 @@
                 <span class="close">&times;</span>
               </div>
         </div> -->
-        <div class="grid-page-container">
-            <div class="grid-item">
-                <div class="headerdet">
-                    <img class="tndet" data-tn>
-                    <div class="headerText">
-                     <h1 class="title" data-title></h1>
-                     <p class="descr"data-desc></p>
-                     <div class="filterbuttons"><span data-try></span>
+        <!-- <div class="grid-page-container"> -->
+            <div class="pageHeaderContainer">
+                <div class="pageHeader">
+                    <div class="headerdet">
+                        <img class="tndet" data-tn>
+                        <div class="headerText">
+                         <h1 class="title" data-title></h1>
+                         <p class="descr"data-desc></p>
+                         <div class="filterbuttons"><span data-try></span>
+                            </div>
                         </div>
+                  </div>
+                  <div class="descripContainer">
+                    <div class="descripBox">
+                      <h4 class="subTitle">Creator</h4>
+                     <img src="assets/creator.svg"> 
+                      <p data-creator></p>
+                        
+                      </div>
+                    <div class="descripBox">
+                      <h4 class="subTitle">Type of Effect</h4>
+                      <img id="typeIcon" src="https://picsum.photos/50/50"> 
+                      <p data-typeAR></p>
                     </div>
-              </div>
-        </div>
-        <div class="grid-item">
-            <div data-map>
+                    <div class="descripBox">
+                        <h4 class="subTitle">Keywords</h4>
+                        <img src="assets/book.svg"> 
+                        <p data-keyword></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="pageMap">
+                    <div data-map>
+                    </div>
+                </div>
             </div>
-            <div class="container-btn">
-            <span data-doc></span>
-            </div>
-       </div>
         <div class="grid-item">
             <!-- <div class="container" data-urltn> -->
             <!-- <div class="detailcontainer">
@@ -128,8 +145,6 @@
         </div>
         <!-- <div class="div-page-container-text"></div> -->
         <!-- <div class="grid-page-container-text"data-page-body> -->
-        <div class="grid-item"data-page-body>
-
             <div class="grid-item">
                 <h3>Intro
                 </h3>
@@ -143,10 +158,7 @@
                     <span onclick="readMore()" id="more">More</span>
                 </p>
             </div>
-        </div>
-      
-
-    </div>
+    <!-- </div> -->
 </template>
 
 </body>
