@@ -119,7 +119,8 @@ if(searchParams.has('id') == true){
               typeofARIcon.src = "assets/worldeffect.svg"
             }
 
-
+            const tooltipAR = page.querySelector("[data-ARtooltip]")
+            
             // const local = xr.location;
             // if(xr.location == "NA"){
             //     location = ;}
