@@ -100,7 +100,7 @@ if(searchParams.has('id') == true){
               const googleMap = document.createElement("img")
               mapComponent.appendChild(googleMap)
               googleMap.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + xr.map +"&zoom=18&size=400x400&markers=color:red%7Clabel:DoyerSt%7C"+ xr.map +"&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE"
-              console.log(googleMap.src)
+              // console.log(googleMap.src)
             }
 
             // const local = xr.location;
@@ -265,9 +265,6 @@ if(searchParams.has('id') == true){
           // directBtn.setAttribute("onclick", "mapAr()")
           // directBtn.innerHtml = `<img src="">Directions `
 
-
-
-
             xrsPageContainer.append(page);
     }) 
     // .then(() => glide.mount());
@@ -312,27 +309,35 @@ if(searchParams.has('id') == true){
             header.innerHTML = `<a href="?id=${xr.id}">
             <h3 class="exptitle">${xr.title}</h3>
             </a>`
+
+            // <p>${blurbpreview}</p>
             body.innerHTML = 
             `<p><img class="cardIcon" src="assets/creator.svg">${authorAmount} ${authorUI}</p>
             <span>Platform: ${xr.platform}</span>
-            
-            <p>${blurbpreview}</p>
+            <p><img class="cardIcon" src="assets/book.svg">Keywords: <span class="keywords">${xr.keywords}</span></p>
+
+            <div class="">
             <button class="button" onclick="window.location.href='${xr.url}'">
             Try at Home
             </button>
             <button class="button" onclick="window.location.href='?id=${xr.id}'">
             Detail
-            </button>
+            </button></div>
             `
+            const flexMapModule = card.querySelector("#cardMap")
+            console.log(flexMapModule)
             if(xr.map !== "NA"){
               mapModule.innerHTML = `
               <img src="https://maps.googleapis.com/maps/api/staticmap?center=${xr.map}&zoom=18&size=200x200&markers=color:red%7Clabel:DoyerSt%7C6DoyersSt&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE">
-              <p>${xr.address}</p>
+              <p class="">${xr.address}</p>
               `
             }else{
-              mapModule.innerHTML = `
-              <p class="anywhereBtn">Try Anywhere</p>
-              `
+              flexMapModule.remove();
+              // flexMapModule.classList.add("hidden");
+              // mapModule.innerHTML = 
+              // `
+              // <p class="anywhereBtn">Try Anywhere</p>
+              // `
             }
           
 
