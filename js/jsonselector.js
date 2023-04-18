@@ -117,10 +117,30 @@ if(searchParams.has('id') == true){
             const typeofARIcon = page.querySelector("#typeIcon")
             if(xr.type == "World Effect"){
               typeofARIcon.src = "assets/worldeffect.svg"
+              typeofARIcon.classList.add("typeIcon")
+
+              
             }
+            const overlay = page.querySelector('#overlay');
+            function showOverlay() {
+              overlay.style.display = 'block';
+            }
+            // Example trigger with a button click
+            const button = page.querySelector('#hintTypeAR');
+            button.addEventListener('click', showOverlay);
+            function hideOverlay() {
+              overlay.style.display = 'none';
+            }
+            // Example close button
+            const closeButton = page.querySelector('#close-button');
+            closeButton.addEventListener('click', hideOverlay);
+            // Example click outside of popup
+            overlay.addEventListener('click', hideOverlay);   
+            
+            
 
             const tooltipAR = page.querySelector("[data-ARtooltip]")
-
+            
             // const local = xr.location;
             // if(xr.location == "NA"){
             //     location = ;}

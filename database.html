@@ -95,7 +95,16 @@
               </div>
         </div> -->
         <!-- <div class="grid-page-container"> -->
+
+
+    <div id="overlay"> 
+        <div id="popup">
+            <button id="close-button">Close me</button>
+            popup overlay
+        </div>
+    </div>
             <div class="pageHeaderContainer">
+                
                 <div class="pageHeader">
                     <div class="headerdet">
                         <img class="tndet" data-tn>
@@ -109,18 +118,22 @@
                   <div class="descripContainer">
                     <div class="descripBox">
                       <h4 class="subTitle">Creator</h4>
-                     <img src="assets/creator.svg"> 
+                     <img class="typeIcon" src="assets/creator.svg"> 
                       <p data-creator></p>
                         
                       </div>
                     <div class="descripBox">
-                      <h4 class="subTitle">Type of Effect <span data-ARtooltip><img src="assets/hinticon.svg"></span></h4>
+                      <h4 class="subTitle">Type of Effect 
+                        <span id="hintTypeAR" data-ARtooltip>
+                        <img class="hintIcon" src="assets/hinticon.svg">
+                        </span>
+                    </h4>
                       <img id="typeIcon" src="https://picsum.photos/50/50"> 
                       <p data-typeAR></p>
                     </div>
                     <div class="descripBox">
                         <h4 class="subTitle">Keywords</h4>
-                        <img src="assets/book.svg"> 
+                        <img class="typeIcon" src="assets/book.svg"> 
                         <p data-keyword></p>
                     </div>
                   </div>
