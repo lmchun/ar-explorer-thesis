@@ -27,6 +27,8 @@ html, body {
     cursor: pointer;
     background-color:#115994;
     border-radius: .5em;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .textbox{
@@ -332,9 +334,10 @@ html, body {
 
     .grid-card-container {
       display:flex;
-      justify-content: space-between;
       padding: 10px;
       color:black;
+      justify-content: center;
+			align-items: center;
     }
     .headerPage{
       margin-bottom: 0px;
@@ -481,6 +484,13 @@ html, body {
         cursor: pointer;
         background-color: #115994;
         border-radius: .5em;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #platformButton{
+        display: flex;
+        flex-wrap: wrap;
       }
       .detailimg{
         height:300px;
@@ -623,27 +633,41 @@ html, body {
 
 		.grid-item-map {
 			flex: 1; /* takes up 2/5 of the available space */
-			width: 100%;
-			/* height: 200px; */
+		  display: flex;
       margin: 0rem 0.1rem;
-			display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
+       flex-wrap: wrap;
+      justify-content: center; 
+      align-items: center; 
+      width: 15vw;
 		}
+
+    .mapAddressp{
+      width:100%;
+      margin: 0 auto; 
+      padding: 1rem 0rem;
+        }
+
+
+
+    .mapScale{
+      /* width: 100%; */
+      height: 80%;
+      object-fit: cover;
+    }    
 
     .hidden {
 			display: none;
 		}
 		
-    .mapAddressp{
-      width:20rem;
-    }
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 1020px) {
 			.Cardcontainer {
 				flex-direction: column;
 			}
 			
+      .mapAddressp{
+        padding: 0.1rem 10rem;
+          }
+
 			.grid-item-image {
 				margin-bottom: 2rem;
         width: 100%;
@@ -656,7 +680,15 @@ html, body {
 				margin-bottom: 2rem;
         width: 100%;
 			}
+
+      .gridSpaceNoMap{
+        margin-left: 0vw !important;
+      }
 		}
+    .gridSpaceNoMap{
+      margin-left: 15vw;
+    }
+ 
     /*           */
     .grid-page-container-text{
       flex-wrap:wrap;
@@ -1335,9 +1367,7 @@ html, body {
 .iconMap{
   width:30px;
 }
-.maptn{
- width:15vw;
-}
+
 
 .cardMain{
   width: 40vw;
@@ -1521,16 +1551,10 @@ padding: 0rem 10rem;
   .pageMap {
     flex-basis: 33%;
   }
-  /* .mapScale{
-    width: 40% !important;
-  } */
+*/
 }
 
-.mapScale{
-  /* width: 100%; */
-  height: 80%;
-  object-fit: cover;
-}
+
 
 .directBtn{
   background-color: white;
@@ -1666,8 +1690,6 @@ padding: 0rem 10rem;
 .featureImage2{
   width:60%;
 }
-
-
 .image-div{
   margin:0rem;
 }

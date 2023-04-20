@@ -356,11 +356,12 @@ if(searchParams.has('id') == true){
             <p class="iconVertCard"><img src="assets/book.svg">Keywords: <span class="keywords">${xr.keywords}</span></p>
 
             <div class="">
-            <button class="button" onclick="onclick="window.location.href='${xr.url}'"><img id="platformChecker">Try Experience on ${xr.platform}</button>
+            <button class="button" onclick="onclick="window.location.href='${xr.url}'"><img id="platformChecker"><span id="platformButton">Try Experience on ${xr.platform}</span></button>
             <button class="button" onclick="window.location.href='?id=${xr.id}'">
             Detail
             </button></div>
             `
+
             const flexMapModule = card.querySelector("#cardMap")
             console.log(flexMapModule)
             if(xr.map !== "NA"){
@@ -370,6 +371,8 @@ if(searchParams.has('id') == true){
               `
             }else{
               flexMapModule.remove();
+              const gridTextnoMap = card.querySelector("#gridText");
+              gridTextnoMap.classList.add("gridSpaceNoMap")
               // flexMapModule.classList.add("hidden");
               // mapModule.innerHTML = 
               // `
