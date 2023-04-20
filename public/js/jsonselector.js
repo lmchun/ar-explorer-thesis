@@ -87,7 +87,7 @@ if(searchParams.has('id') == true){
             const authorSplit = xr.authors
             const authorUI = authorSplit.toString().replace(",", ", ");
             const trybutton =  page.querySelector("[data-try]");
-            trybutton.innerHTML =  `<button class="buttonfilter"><img id="platformChecker">Try Experience on ${xr.platform}</button>`
+            trybutton.innerHTML =  `<button class="buttonfilter" onclick="onclick="window.location.href='${xr.url}'"><img id="platformChecker">Try Experience on ${xr.platform}</button>`
 
             // ORIGINAL BUTTON GO TO EXPERIENCE LINK
             // trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'">Try Experience</button>`
@@ -96,13 +96,14 @@ if(searchParams.has('id') == true){
               const mapComponent = page.querySelector("[data-map]")
               const googleMap = document.createElement("img")
               const mapAddress = document.createElement("p")
-              const  directionBtn= document.createElement("span")
+              const  directionBtn = document.createElement("span")
               mapComponent.appendChild(googleMap)
               googleMap.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + xr.map +"&zoom=18&size=400x400&markers=icon:https://lc4726.itp.io/qr/assets/foundARmap.png"+ "%7C"+ xr.map +"&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE"
-              googleMap.classList.add("mapScale")
-              mapAddress.innerHTML = `${xr.address}`
-              mapComponent.appendChild(mapAddress)
-              mapComponent.appendChild(directionBtn)
+              googleMap.classList.add("mapScale");
+              mapAddress.innerHTML = `${xr.address}`;
+              mapAddress.classList.add("mapAddressp");
+              mapComponent.appendChild(mapAddress);
+              mapComponent.appendChild(directionBtn);
               directionBtn.innerHTML=`<button class="directBtn" onclick="window.location.href='${xr.googleMap}'"> <img class="iconMap"src="assets/mapicon.svg"> <span> Directions <span> </button>`
             }
             const creators = page.querySelector("[data-creator]")
@@ -350,14 +351,12 @@ if(searchParams.has('id') == true){
 
             // <p>${blurbpreview}</p>
             body.innerHTML = 
-            `<p><img class="cardIcon" src="assets/creator.svg">${authorAmount} ${authorUI}</p>
+            `<p class="iconVertCard"><img  src="assets/creator.svg">${authorAmount} ${authorUI}</p>
             <span>Platform: ${xr.platform}</span>
-            <p><img class="cardIcon" src="assets/book.svg">Keywords: <span class="keywords">${xr.keywords}</span></p>
+            <p class="iconVertCard"><img src="assets/book.svg">Keywords: <span class="keywords">${xr.keywords}</span></p>
 
             <div class="">
-            <button class="button" onclick="window.location.href='${xr.url}'">
-            Try at Home
-            </button>
+            <button class="button" onclick="onclick="window.location.href='${xr.url}'"><img id="platformChecker">Try Experience on ${xr.platform}</button>
             <button class="button" onclick="window.location.href='?id=${xr.id}'">
             Detail
             </button></div>
@@ -366,8 +365,8 @@ if(searchParams.has('id') == true){
             console.log(flexMapModule)
             if(xr.map !== "NA"){
               mapModule.innerHTML = `
-              <img src="https://maps.googleapis.com/maps/api/staticmap?center=${xr.map}&zoom=18&size=200x200&markers=icon:https://lc4726.itp.io/qr/assets/foundARmap.png%7C${xr.map}&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE">
-              <p class="">${xr.address}</p>
+              <img class="mapScale" src="https://maps.googleapis.com/maps/api/staticmap?center=${xr.map}&zoom=18&size=200x200&markers=icon:https://lc4726.itp.io/qr/assets/foundARmap.png%7C${xr.map}&key=AIzaSyCAirwcBgqDzPj6DlLDNzWvF-DPlcjsXfE">
+              <p class="mapAddressp">${xr.address}</p>
               `
             }else{
               flexMapModule.remove();
