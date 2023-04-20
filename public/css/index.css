@@ -850,7 +850,7 @@ html, body {
       .contentpage2{
         padding: 0% 15%;
         /* margin:1vw; */
-        width:100%;
+        /* width:100%; */
       }
       .imgcenter{
         display: block;
@@ -1557,7 +1557,6 @@ padding: 0rem 10rem;
   .pageMap {
     flex-basis: 33%;
   }
-*/
 }
 
 
@@ -1587,7 +1586,7 @@ padding: 0rem 10rem;
   overflow: auto;
   position: relative;
  text-align: center;
- z-index: 1;
+ /* z-index: 1; */
 }
 
 @media (max-width: 768px) {
@@ -1670,6 +1669,7 @@ padding: 0rem 10rem;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
+  z-index: 2;
 }
 
 #popup {

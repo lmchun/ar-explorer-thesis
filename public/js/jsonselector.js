@@ -87,7 +87,7 @@ if(searchParams.has('id') == true){
             const authorSplit = xr.authors
             const authorUI = authorSplit.toString().replace(",", ", ");
             const trybutton =  page.querySelector("[data-try]");
-            trybutton.innerHTML =  `<button class="buttonfilter" onclick="onclick="window.location.href='${xr.url}'"><img id="platformChecker">Try Experience on ${xr.platform}</button>`
+            trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'"><img id="platformChecker">Try Experience on ${xr.platform}</button>`
 
             // ORIGINAL BUTTON GO TO EXPERIENCE LINK
             // trybutton.innerHTML =  `<button class="buttonfilter" onclick="window.location.href='${xr.url}'">Try Experience</button>`
@@ -116,6 +116,7 @@ if(searchParams.has('id') == true){
             typeofAR.innerHTML = `${xr.type}`
             keyword.innerHTML = `<span class="keywordWrap"> ${keywordList} </span>`
             const typeofARIcon = page.querySelector("#typeIcon")
+            const helpInfo = page.querySelector("[data-typeofEffect]")
             if(xr.type == "World Effect"){
               typeofARIcon.src = "assets/worldeffect.svg"
               typeofARIcon.classList.add("typeIcon")
@@ -356,7 +357,7 @@ if(searchParams.has('id') == true){
             <p class="keywordWrap iconVertCard"><img src="assets/book.svg">Keywords: <span class="keywords keywordWrap">${xr.keywords}</span></p>
 
             <div class="">
-            <button class="button" onclick="onclick="window.location.href='${xr.url}'"><img id="platformChecker"><span id="platformButton">Try Experience on ${xr.platform}</span></button>
+            <button class="button" onclick="window.location.href='${xr.url}'"><img id="platformChecker"><span id="platformButton">Try Experience on ${xr.platform}</span></button>
             <button class="button" onclick="window.location.href='?id=${xr.id}'">
             Detail
             </button></div>
