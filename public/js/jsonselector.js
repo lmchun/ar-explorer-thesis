@@ -114,7 +114,7 @@ if(searchParams.has('id') == true){
 
             creators.innerHTML = `${xr.authors}`
             typeofAR.innerHTML = `${xr.type}`
-            keyword.innerHTML = `${keywordList}`
+            keyword.innerHTML = `<span class="keywordWrap"> ${keywordList} </span>`
             const typeofARIcon = page.querySelector("#typeIcon")
             if(xr.type == "World Effect"){
               typeofARIcon.src = "assets/worldeffect.svg"
@@ -353,7 +353,7 @@ if(searchParams.has('id') == true){
             body.innerHTML = 
             `<p class="iconVertCard"><img  src="assets/creator.svg">${authorAmount} ${authorUI}</p>
             <span>Platform: ${xr.platform}</span>
-            <p class="iconVertCard"><img src="assets/book.svg">Keywords: <span class="keywords">${xr.keywords}</span></p>
+            <p class="keywordWrap iconVertCard"><img src="assets/book.svg">Keywords: <span class="keywords keywordWrap">${xr.keywords}</span></p>
 
             <div class="">
             <button class="button" onclick="onclick="window.location.href='${xr.url}'"><img id="platformChecker"><span id="platformButton">Try Experience on ${xr.platform}</span></button>

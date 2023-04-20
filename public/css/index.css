@@ -2,6 +2,8 @@ html, body {
   margin: 0vw;
     /* padding: auto; */
     font-family: 'Raleway', sans-serif;
+    width:100vw;
+    overflow-x: hidden;
   }
  
   .form{
@@ -12,8 +14,8 @@ html, body {
 
   .contentQr{ 
    z-index: 9;
-   margin: 5px;
-   padding-left: 20px;
+   /* margin: 5px;
+   padding-left: 20px; */
   }
   .button {
     border: none;
@@ -107,7 +109,6 @@ html, body {
     background-image: url("../assets/heroimage-map.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    /* background-attachment: fixed; */
     background-position: center;
     width:100%;
     height:20%;
@@ -176,6 +177,7 @@ html, body {
     border-bottom: 1px solid black;
     /* background-color:white; */
     /* padding: 0.5 rem; */
+    margin: 0;
   }
 
   .card > .header{
@@ -436,8 +438,8 @@ html, body {
     }
 
     .box {
-    width: 310px;
-    height: 310px;
+    width: 240px;
+    height: 240px;
     background-image: url("qr-pic-gray.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -486,6 +488,8 @@ html, body {
         border-radius: .5em;
         display: flex;
         flex-wrap: wrap;
+        white-space: normal; 
+        word-wrap: break-word; 
       }
 
       #platformButton{
@@ -606,14 +610,14 @@ html, body {
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
-      /* width: 100%; */
+      width: 100%;
 		}
 
 		.grid-item-image {
 			flex: 1; /* takes up 2/5 of the available space */
-			width: 400px;
+			width: 200px;
 			/* height: 200px; */
-      	margin: 0.1rem;
+      /* margin: 0.1rem 0rem; */
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -623,7 +627,7 @@ html, body {
 			flex: 3; /* takes up 1/5 of the available space */
 			width: 200px;
 			/* height: 200px; */
-      margin: 0.1rem;
+      /* margin: 0.1rem; */
 			display: flex;
       justify-content: center;
       align-items: center;
@@ -634,7 +638,7 @@ html, body {
 		.grid-item-map {
 			flex: 1; /* takes up 2/5 of the available space */
 		  display: flex;
-      margin: 0rem 0.1rem;
+      /* margin: 0rem 0.1rem; */
        flex-wrap: wrap;
       justify-content: center; 
       align-items: center; 
@@ -665,7 +669,7 @@ html, body {
 			}
 			
       .mapAddressp{
-        padding: 0.1rem 10rem;
+        padding: 0.1rem 0rem;
           }
 
 			.grid-item-image {
@@ -674,7 +678,7 @@ html, body {
 			}
       	.grid-item-text {
 				margin-bottom: 2rem;
-        width: 100%;
+
 			}
       	.grid-item-map {
 				margin-bottom: 2rem;
@@ -682,7 +686,7 @@ html, body {
 			}
 
       .gridSpaceNoMap{
-        margin-left: 0vw !important;
+        margin-left: 0.1vw !important;
       }
 		}
     .gridSpaceNoMap{
@@ -703,7 +707,6 @@ html, body {
     .urltn{
       height: 200px;
       width: 200px;
-      /* width: 20vw; height: 20vw;  */
       object-fit: cover;
       border-radius: 0.2rem;
       display: block;
@@ -847,6 +850,7 @@ html, body {
       .contentpage2{
         padding: 0% 15%;
         /* margin:1vw; */
+        width:100%;
       }
       .imgcenter{
         display: block;
@@ -1077,6 +1081,7 @@ html, body {
   
       .qrcontainer{
             align-items: center;
+            padding-bottom: 30rem;
       }
 /* 
       .resultHeader{
@@ -1448,8 +1453,9 @@ html, body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
   margin: 2rem 0rem;
+  width:100%
 }
 @media (max-width: 953px){
   .Definecontainer{
@@ -1485,7 +1491,7 @@ padding: 0rem 10rem;
   /* background-color: white; */
   padding: 0rem 5rem;
   /* box-shadow: 0 2px 6px #464646; */
-  margin: 0rem 2rem;
+  /* margin: 0rem 2rem; */
   border-radius: 1rem;
 }
 .colorBlue{
@@ -1693,4 +1699,9 @@ padding: 0rem 10rem;
 .image-div{
   margin:0rem;
 }
+}
+
+.keywordWrap{
+  display: flex;
+  flex-wrap: wrap;
 }

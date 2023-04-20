@@ -82,7 +82,7 @@ fetch("https://lc4726.itp.io/all")
           qrDiv.innerHTML = qrImg;
           qrDiv.id = "qrimage"
           qrName.id = "qrstring"
-          document.getElementById("content").appendChild(qrName);
+          document.querySelector(".hrSpace").appendChild(qrName);
           document.getElementById("content").appendChild(qrDiv);
           addContent = true;
         }else{
