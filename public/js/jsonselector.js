@@ -63,8 +63,13 @@ searchInput.addEventListener("input", (e)=>{
             let result = authors.some(author => author.toLowerCase().includes(searchValue)) 
             return result
         }
+        function haskeywords (searchValue, keywords) {
+          //same as previous but with the keywords
+          let result = keywords.some(keyword => keyword.toLowerCase().includes(searchValue)) 
+          return result
+      }
         // const isVisible = xr.title.toLowerCase().includes(value) || xr.platform.toLowerCase().includes(value)  || xr.type.toLowerCase().includes(value) || hasAuthor(value,xr.authors) || xr.address.toLowerCase().includes(value) || xr.location.toLowerCase().includes(value) 
-        const isVisible = xr.title.toLowerCase().includes(removeComma) || xr.platform.toLowerCase().includes(removeComma)  || xr.type.toLowerCase().includes(removeComma) || hasAuthor(removeComma,xr.authors) || xr.address.toLowerCase().includes(removeComma) || xr.location.toLowerCase().includes(removeComma) 
+        const isVisible = xr.title.toLowerCase().includes(removeComma) || xr.platform.toLowerCase().includes(removeComma)  || xr.type.toLowerCase().includes(removeComma) || hasAuthor(removeComma,xr.authors) || xr.address.toLowerCase().includes(removeComma) || xr.location.toLowerCase().includes(removeComma) || haskeywords(removeComma,xr.keywords)
         xr.element.classList.toggle("hide", !isVisible)
     })
 })
@@ -386,7 +391,7 @@ if(searchParams.has('id') == true){
 
             xrsCardContainer.append(card);
             return{
-                title: xr.title, url: xr.url, platform: xr.platform, type: xr.type, element : card, authors: xr.authors, address: xr.address, location:xr.location
+                title: xr.title, url: xr.url, platform: xr.platform, type: xr.type, element : card, authors: xr.authors, address: xr.address, location:xr.location, keywords:xr.keywords
             }
         })
     })
