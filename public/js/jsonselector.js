@@ -116,7 +116,12 @@ if(searchParams.has('id') == true){
             typeofAR.innerHTML = `${xr.type}`
             keyword.innerHTML = `<span class="keywordWrap"> ${keywordList} </span>`
             const typeofARIcon = page.querySelector("#typeIcon")
-            const helpInfo = page.querySelector("[data-typeofEffect]")
+            const helpInfo = page.querySelector("[data-typeofEffect]");
+            helpInfo.innerHTML = `
+            <h3>${xr.type}</h3>
+            <p></p>
+            <img src="assets/.gif">
+            `
             if(xr.type == "World Effect"){
               typeofARIcon.src = "assets/worldeffect.svg"
               typeofARIcon.classList.add("typeIcon")
