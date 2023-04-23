@@ -1679,7 +1679,9 @@ padding: 0rem 10rem;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 20px;
+  padding: 1rem 1rem;
+  width: 80%;
+  border-radius: 1rem;
 }
 
 .featureImage{
@@ -1700,9 +1702,29 @@ padding: 0rem 10rem;
 .image-div{
   margin:0rem;
 }
+#popup{
+  width: 30%;
+
+}
 }
 
 .keywordWrap{
   display: flex;
   flex-wrap: wrap;
+}
+
+.animationType{
+  width: 100px !important;
+  height: auto;
+}
+
+#close-button{
+  float: right;
+  right: 0;
+  background-color: white;
+  border: 0px solid white;
+  font-size: 20px;
+}
+.gif{
+  text-align: center;
 }
