@@ -135,7 +135,7 @@ if(searchParams.has('id') == true){
               typeofARIcon.src = "assets/faceffect.svg"
               typeofARIcon.classList.add("typeIcon")
               typeOfDescription = "AR content that overlays over your face";
-              typeGif = "assets/winkanimation2.5.gif";
+              typeGif = "assets/winkanimation.gif";
             }
 
             helpInfo.innerHTML = `
