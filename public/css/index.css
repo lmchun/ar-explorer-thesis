@@ -1180,11 +1180,12 @@ html, body {
   text-decoration: none;
   cursor: pointer;
 }
-
 .headerdet{
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
 .tndet{
     height: 150px;
     width: 150px;
