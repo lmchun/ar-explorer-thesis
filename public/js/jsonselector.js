@@ -121,13 +121,36 @@ if(searchParams.has('id') == true){
             typeofAR.innerHTML = `${xr.type}`
             keyword.innerHTML = `<span class="keywordWrap"> ${keywordList} </span>`
             const typeofARIcon = page.querySelector("#typeIcon")
-            const helpInfo = page.querySelector("[data-typeofEffect]")
+            const helpInfo = page.querySelector("[data-typeofEffect]");
+            let typeOfDescription = "hi";
+            let typeGif = "assets/winkanimation2.5.gif";
             if(xr.type == "World Effect"){
               typeofARIcon.src = "assets/worldeffect.svg"
               typeofARIcon.classList.add("typeIcon")
-
-              
+              typeOfDescription = "AR content that is overlaying your entire world. Point your phone at the ground or building.";
+              typeGif = "assets/worldanimation.gif";
             }
+            else if(xr.type== "Surface Effect"){
+              typeofARIcon.src = "assets/surfaceffect.svg"
+              typeofARIcon.classList.add("typeIcon")
+              typeOfDescription = "AR content that is to be placed on a table.";
+              typeGif = "assets/surfaceanimation.gif";
+            }
+            else if(xr.type== "Face Effect"){
+              typeofARIcon.src = "assets/faceffect.svg"
+              typeofARIcon.classList.add("typeIcon")
+              typeOfDescription = "AR content that overlays over your face";
+              typeGif = "assets/winkanimation.gif";
+            }
+
+            helpInfo.innerHTML = `
+            <h3>${xr.type}</h3>
+            <p>${typeOfDescription}</p>
+            <div class="gif">
+            <img class="animationType" src="${typeGif}">
+            </div>
+            `
+           
             const overlay = page.querySelector('#overlay');
             function showOverlay() {
               overlay.style.display = 'block';
