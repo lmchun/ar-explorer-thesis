@@ -654,7 +654,7 @@ html, body {
 
 
     .mapScale{
-      /* width: 100%; */
+      width: 300px;
       height: 80%;
       object-fit: cover;
     }    
@@ -871,6 +871,13 @@ html, body {
         background-color: #115994;
         border: 3px solid rgba(200,200,200,0);
         border-radius: 0.6em;
+        width: 80vw;
+      }
+
+      @media screen and (max-width: 500px) {
+        .buttonfilter{
+        width: 90vw; 
+       }
       }
       .container-btn{
         position: relative;
@@ -1534,12 +1541,20 @@ padding: 0rem 10rem;
   flex-basis: 40%;
   /* height: 500px; */
   box-sizing: border-box;
-  padding: 20px;
+  /* padding: 20px; */
   /* border: 1px solid black; */
   text-align: center;
   /* background-color: lightgreen; */
 }
 
+.directBtn{
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 15vw;
+  font-size: 18px;
+  margin: 0.5rem 0rem;
+  padding: 0.3rem 0.2 rem;
+}
 @media only screen and (max-width:1236px){
   .pageHeader {
     flex-basis: 100%;
@@ -1558,18 +1573,19 @@ padding: 0rem 10rem;
   .pageMap {
     flex-basis: 33%;
   }
-}
-
 
 
 .directBtn{
-  background-color: white;
-  border-radius: 0.5rem;
-  width: 15vw;
-  font-size: 18px;
-  margin: 0.5rem 0rem;
-  padding: 0.3rem 0.2 rem;
+  width: 45vw;
+  margin: 1rem 1rem;
 }
+}
+.detailBody{
+  padding: 0rem 1rem;
+}
+
+
+
 
 
 .descripContainer {
@@ -1684,6 +1700,12 @@ padding: 0rem 10rem;
   border-radius: 1rem;
 }
 
+@media screen and (min-width: 500px){
+  #popup{
+    top: 30%;
+  }
+}
+
 .featureImage{
   width:100%;
   border-radius: 0.2rem;
@@ -1711,6 +1733,7 @@ padding: 0rem 10rem;
 .keywordWrap{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .animationType{
