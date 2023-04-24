@@ -615,7 +615,7 @@ html, body {
 
 		.grid-item-image {
 			flex: 1; /* takes up 2/5 of the available space */
-			width: 200px;
+			width: 250px;
 			/* height: 200px; */
       /* margin: 0.1rem 0rem; */
 			display: flex;
@@ -627,9 +627,10 @@ html, body {
 			flex: 3; /* takes up 1/5 of the available space */
 			width: 200px;
 			/* height: 200px; */
-      /* margin: 0.1rem; */
+      margin-left: 0.5rem;
 			display: flex;
-      justify-content: center;
+      /* justify-content: center; */
+      justify-content: flex-start;
       align-items: center;
       flex-wrap: wrap;
       padding: 0rem 1rem;
@@ -685,12 +686,12 @@ html, body {
         width: 100%;
 			}
 
-      .gridSpaceNoMap{
+      /* .gridSpaceNoMap{
         margin-left: 0.1vw !important;
-      }
+      } */
 		}
     .gridSpaceNoMap{
-      margin-left: 15vw;
+      margin:5rem 0rem;
     }
  
     /*           */
@@ -705,8 +706,8 @@ html, body {
 
 
     .urltn{
-      height: 200px;
-      width: 200px;
+      height: 250px;
+      width: 250px;
       object-fit: cover;
       border-radius: 0.2rem;
       display: block;
@@ -879,6 +880,18 @@ html, body {
         width: 90vw; 
        }
       }
+
+      @media screen and (min-width: 900px) {
+        .buttonfilter{
+        width: 45vw; 
+       }
+      }
+      @media screen and (min-width: 1900px) {
+        .buttonfilter{
+        width: 30vw; 
+       }
+      }
+
       .container-btn{
         position: relative;
         width: 100%;
@@ -929,13 +942,16 @@ html, body {
         text-decoration-line: underline;
       }
       .exptitle{
-        margin-bottom: 0rem;
+        margin-bottom: 1rem;
         margin-top: 0rem;
+        font-size: 32px;
       }
       .exptitle:hover{
         text-decoration-line: underline;
       }
-
+      .cardDescriptors{
+        font-size: 24px;
+      }
       /* .exptitle:active{
         background-color: ;
       } */
@@ -1750,4 +1766,36 @@ padding: 0rem 10rem;
 }
 .gif{
   text-align: center;
+}
+
+.buttonSearchCards{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.iconVertDetail{
+  display:flex !important;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0.1rem 0rem; */
+}
+.iconVertDetail img{
+  width:20px;
+  height:20px;
+  margin-right: 10px;
+}
+
+.backgroundHome{
+  /* background-image:url("../assets/home.svg"); */
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
+  text-align: center;
+  background-position: 50%;
+  position: relative;
+  height: auto;
+  padding: 1rem 3rem;
+  margin: 0.5rem;
+  font-size: 2rem;
+  border: #1B6098 0.3rem solid;
+  border-radius: 1rem;
 }

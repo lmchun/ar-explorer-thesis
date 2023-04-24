@@ -109,8 +109,15 @@ if(searchParams.has('id') == true){
               mapAddress.classList.add("mapAddressp");
               mapComponent.appendChild(mapAddress);
               mapComponent.appendChild(directionBtn);
-              directionBtn.innerHTML=`<button class="directBtn" onclick="window.location.href='${xr.googleMap}'"> <img class="iconMap"src="assets/mapicon.svg"> <span> Directions <span> </button>`
+              directionBtn.innerHTML=`<button class="directBtn" onclick="window.location.href='${xr.googleMap}'"> <span class="iconVertDetail"> <img class="iconMap"src="assets/mapicon.svg"> <span> Directions </span></span> </button>`
+            }else{
+              let MapArea = page.querySelector("#MapArea");
+              MapArea.classList.remove("pageMap");
+              let HeaderArea = page.querySelector(".pageHeader")
+              HeaderArea.style.flexBasis = '100%';
             }
+              
+            
             const creators = page.querySelector("[data-creator]")
             const typeofAR = page.querySelector("[data-typeAR")
             const keyword = page.querySelector("[data-keyword]")
@@ -380,11 +387,11 @@ if(searchParams.has('id') == true){
 
             // <p>${blurbpreview}</p>
             body.innerHTML = 
-            `<p class="iconVertCard"><img  src="assets/creator.svg">${authorAmount} ${authorUI}</p>
-            <span>Platform: ${xr.platform}</span>
-            <p class="keywordWrap iconVertCard"><img src="assets/book.svg">Keywords: <span class="keywords keywordWrap">${xr.keywords}</span></p>
+            `<p class="cardDescriptors iconVertCard"><img  src="assets/creator.svg">${authorAmount} ${authorUI}</p>
+            <span class="cardDescriptors">Platform: ${xr.platform}</span>
+            <p class="cardDescriptors keywordWrapMain iconVertCard"><img src="assets/book.svg">Keywords: ${xr.keywords}</p>
 
-            <div class="">
+            <div class="buttonSearchCards">
             <button class="button" onclick="window.location.href='${xr.url}'"><img id="platformChecker"><span id="platformButton">Try Experience on ${xr.platform}</span></button>
             <button class="button" onclick="window.location.href='?id=${xr.id}'">
             Detail
@@ -399,9 +406,17 @@ if(searchParams.has('id') == true){
               <p class="mapAddressp">${xr.address}</p>
               `
             }else{
-              flexMapModule.remove();
+              // flexMapModule.remove();
+              flexMapModule.innerHTML = `<div onclick="window.location.href='${xr.url}'" class="backgroundHome" >
+              <img src="assets/home.svg"><span class="exptitle"> Try at Home</span></div>
+              `;
               const gridTextnoMap = card.querySelector("#gridText");
               gridTextnoMap.classList.add("gridSpaceNoMap")
+              const gridtextBigger = card.querySelector(".grid-item-text")
+              gridtextBigger.style.flex = "4";
+              // gridtextBigger.style.padding = "0rem 2rem";
+
+              // gridtextBigger.style.justifyContent = "flex-start";
               // flexMapModule.classList.add("hidden");
               // mapModule.innerHTML = 
               // `
