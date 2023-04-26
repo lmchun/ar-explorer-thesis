@@ -131,28 +131,38 @@ if(searchParams.has('id') == true){
             const helpInfo = page.querySelector("[data-typeofEffect]");
             let typeOfDescription = "hi";
             let typeGif = "assets/winkanimation2.5.gif";
+            let instructions = "hi";
             if(xr.type == "World Effect"){
               typeofARIcon.src = "assets/worldeffect.svg"
               typeofARIcon.classList.add("typeIcon")
-              typeOfDescription = "AR content that is overlaying your entire world. Point your phone at the ground or building.";
+              typeOfDescription = "AR content that is overlaying your entire world.";
+              instructions = "Point your phone at the floor and see AR around you."
               typeGif = "assets/worldanimation.gif";
             }
             else if(xr.type== "Surface Effect"){
               typeofARIcon.src = "assets/surfaceffect.svg"
               typeofARIcon.classList.add("typeIcon")
               typeOfDescription = "AR content that is to be placed on a table.";
+              instructions = "Point your phone at a table or surface near you to see AR around you."
               typeGif = "assets/surfaceanimation.gif";
             }
             else if(xr.type== "Face Effect"){
               typeofARIcon.src = "assets/faceffect.svg"
               typeofARIcon.classList.add("typeIcon")
               typeOfDescription = "AR content that overlays over your face";
+              instructions = "Hold your phone up to your face like you are taking a photo to see AR on your face."
+              typeGif = "assets/winkanimation.gif";
+            } else if(xr.type== "Image Effect"){
+              typeofARIcon.src = "assets/faceffect.svg"
+              typeofARIcon.classList.add("typeIcon")
+              typeOfDescription = "AR content that overlays over your face";
+              instructions = "Hold your phone up to your face like you are taking a photo to see AR on your face."
               typeGif = "assets/winkanimation.gif";
             }
-
             helpInfo.innerHTML = `
             <h3>${xr.type}</h3>
             <p>${typeOfDescription}</p>
+            <p>${instructions}</p>
             <div class="gif">
             <img class="animationType" src="${typeGif}">
             </div>
