@@ -126,6 +126,27 @@ html, body {
     margin: 0.8rem 0rem !important;
     padding: 1.5rem 0.5rem !important;
   }
+
+  .Definecontainer{
+    padding: 0rem 0rem !important;
+    margin: 0rem 0rem !important;
+  }
+
+  .whiteBack{
+    margin: 0rem 0rem !important;
+  }
+
+  .container{
+    margin: 5px !important;
+  }
+
+  .resultHeader{
+    margin-bottom: 0rem;
+  }
+
+  .qrcontainer{
+    margin: 0rem 1rem;
+  }
   }
 
   .search-wrapper{
@@ -144,6 +165,7 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: .25rem;
+    margin: 0.2rem 0.5rem !important;
     
 }
 .searchLabel{
@@ -153,14 +175,10 @@ html, body {
   padding-bottom: 0.7rem;
 }
 .searchfield{
-  /* box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   /* margin: 0rem 5rem; */
-  /* padding: 0rem 2rem; */
   border: 1px solid rgba(0, 0, 0, 0);
-  width:100%;
+  width:90%;
   /* font-size:16px; */
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
 }
 
 .searchbarContainer{
