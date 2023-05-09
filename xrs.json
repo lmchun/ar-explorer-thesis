@@ -65,7 +65,7 @@
         "authors":["NeoPangea"],
         "platform":"8th Wall",
         "platformtn":"",
-        "tn": "",
+        "tn": "https://s6.imgcdn.dev/rmErB.jpg",
         "detimg":["https://cdn.8thwall.com/images/apps/featured/2q2itswu096wsrvdxeunkurla3p4lsh0o6u392ea5d2mhkwecs7kwvn7-540x960","https://cdn.8thwall.com/images/apps/featured/2fg4kwook2o6fjl8ge1ox2uasya63c8lq27e5mil6wlngnssnarvl4j9-540x960","https://cdn.8thwall.com/images/apps/featured/2tau291951k94wvnn5cpnc8c7jax2qw1u7gfqu3cscg2hcuqzlo06ywj-540x960"],
         "url": "https://wallygame.wawa.com/",
         "doc":"https://www.8thwall.com/neopangea/wallys-adventure",
@@ -453,32 +453,5 @@
         "map":"NA",
         "googleMap":"",
         "keywords":["Interactive","Food"]
-    },
-    {
-        "id": 20,
-        "title":"Fly the Niantic ARship!",
-        "type": "Surface Effect",
-        "genre":"surface AR",
-        "year":"2022",
-        "requirements":"NA",
-        "location": "Online", 
-        "address":"NA",
-        "duration":"3 minutes",
-        "authors":["Wonderment by Design"],
-        "platform":"8th Wall",
-        "tn": "https://cdn.8thwall.com/apps/cover/50xsh38vau9necqmm164cyy99m4h8d69flboewt2885i4d72m4c5jdra-preview-600x315",
-        "detimg":["https://cdn.8thwall.com/images/apps/featured/4xdvi5s9j85ukuqu9u75bzrkr2sxjx3zi8vgygeeqqgb0v4cg392uvjs-540x960","https://cdn.8thwall.com/images/apps/featured/4xprub9kbm3ywizx8k2nho78rvg7k3aeec0jsn4v9dyq9387sa8ckyud-540x960"],
-        "url": "https://8th.io/t/b488nnph",
-        "doc":"https://www.8thwall.com/wbd/airship",
-        "desc":"Take the Niantic ARship on a flight around your world. Click the link to launch the experience.",
-        "tnalt":"A screenshot of a 3D model of dango mochi overlayed on a person's mouth.",
-        "intro":"Fly the Niantic ARship! Take the Niantic ARship on a flight around your world. Click the link to launch the experience.",
-        "detail":"",
-        "price":"Free",
-        "map":"NA",
-        "googleMap":"",
-        "keywords":["Play","Interactive"]
     }
-     
-  
 ]

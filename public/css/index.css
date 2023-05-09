@@ -144,6 +144,9 @@ html, body {
     margin-bottom: 0rem;
   }
 
+  .iconVert{
+    justify-content: center;
+  }
   .qrcontainer{
     margin: 0rem 1rem;
   }
