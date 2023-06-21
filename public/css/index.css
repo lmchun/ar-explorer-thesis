@@ -442,14 +442,15 @@ html, body {
       text-decoration: none;
     }
     
-    /* ul.topnav li a:hover:not(.active) {background-color: #111;}
-    
-    ul.topnav li a.active {background-color: #04AA6D;} */
-    
     ul.topnav li.right {
       float: right;
       /* padding-top:20px; */
     }
+    /* ul.topnav li a:hover:not(.active) {background-color: #111;}
+    
+    ul.topnav li a.active {background-color: #04AA6D;} */
+    
+    
     .scannercontainer{
       /* color: white; */
       border: 1em solid #2D2E43;
@@ -1374,7 +1375,7 @@ html, body {
 
 #navLink{
   color:white;
-  background-color: #000000;
+  background-color: #354259;
 }
 
 .tooltip {
